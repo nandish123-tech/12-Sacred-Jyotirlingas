@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grishneshwar Temple - Twelfth and Final Jyotirlinga</title>
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd700;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --orange-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: var(--orange-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -55%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .fact-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .architecture-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 107, 53, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .temple-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .official-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .special-notice {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .heritage-info {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffffff;
+        }
+
+        .compassion-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .caves-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+                margin: 1rem 0;
+            }
+
+            .key-facts-grid,
+            .architecture-features,
+            .services-grid,
+            .official-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-om me-2"></i>Grishneshwar Temple
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#significance">Significance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Grishneshwar Temple</h1>
+                <p class="hero-subtitle"><span class="compassion-icon">🙏</span>Lord of Compassion - Twelfth Sacred Jyotirlinga</p>
+                <p class="lead mb-4">
+                    Grishneshwar - The final and twelfth Jyotirlinga near UNESCO World Heritage Ellora Caves, 
+                    where Lord Shiva manifests as the "Lord of Compassion" in magnificent Hemadpanthi architecture.
+                </p>
+                <a href="#overview" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-info-circle me-2"></i>Explore Temple
+                </a>
+                <a href="https://ghrishneshwar.com" target="_blank" class="btn btn-outline-primary bg-primary  btn-lg">
+                    <i class="fas fa-external-link-alt me-2"></i>Official Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Overview -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temple Overview</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        <strong>The Grishneshwar Temple</strong>, located in Verul village near Aurangabad, Maharashtra, 
+                        is the twelfth and final Jyotirlinga among the sacred dozen dedicated to Lord Shiva. Situated just 
+                        1.5 kilometers from the UNESCO World Heritage Ellora Caves, this temple represents "Lord of Compassion" 
+                        (Grishneshwar) and is built in the exquisite Hemadpanthi architectural style. Originally constructed 
+                        centuries ago, the temple was restored by Maloji Bhosale (grandfather of Chhatrapati Shivaji) in the 
+                        16th century and later rebuilt in 1729 under the patronage of Queen Ahilyabai Holkar. The temple features 
+                        a magnificent 5-layered shikhara with intricate mythological carvings and attracts thousands of devotees 
+                        daily who come to seek Lord Shiva's compassionate blessings.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/grishneshwar-temple-chhatrapati-sambhaji-nagar-maharashtra-grishneshwar-temple2-attr-hero?qlt=82&ts=1727014197394" alt="Grishneshwar Temple" class="temple-image">
+                </div>
+            </div>
+
+            <div class="heritage-info">
+                <h5><span class="caves-icon">🏛️</span>UNESCO Heritage Proximity</h5>
+                <p class="mb-0">Experience the unique spiritual-cultural confluence just 1.5 km from Ellora Caves UNESCO World Heritage Site. 
+                The temple's location creates an extraordinary journey combining ancient rock-cut architecture with living Jyotirlinga worship.</p>
+            </div>
+
+            <div class="special-notice">
+                <h5><span class="compassion-icon">🎫</span>VIP Darshan & Special Pujas</h5>
+                <p class="mb-0">VIP Darshan (₹500-700) available at temple counter. Temple timings: 5:00 AM-9:30 PM. 
+                Men must go bare-chested in sanctum sanctorum. Book special pujas 3 days in advance through temple office.</p>
+            </div>
+
+            <div class="key-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-title">Ancient Origins:</div>
+                    <p>Mentioned in Shiva Purana, Skanda Purana, Ramayana & Mahabharata, restored by Maloji Bhosale (1729)</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Architecture:</div>
+                    <p>Hemadpanthi style, 5-layered shikhara, intricate mythological carvings, black stone construction</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Location:</div>
+                    <p>Verul village, 30 km from Aurangabad, 1.5 km from Ellora Caves UNESCO World Heritage Site</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Deity:</div>
+                    <p>Grishneshwar Jyotirlinga - Lord Shiva as "Lord of Compassion" (Ghrneshwara)</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Significance:</div>
+                    <p>Twelfth & final Jyotirlinga, national protected monument, restored by Queen Ahilyabai Holkar</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Visitors:</div>
+                    <p>Thousands daily, peak during Shravan month (3 AM-11 PM extended hours) & Mahashivaratri</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient Scriptural Era</div>
+                        <p>Grishneshwar is mentioned in several ancient Hindu scriptures including the Shiva Purana, 
+                        Skanda Purana, Ramayana, and Mahabharata. These texts establish its significance as one of the 
+                        12 sacred Jyotirlingas and describe the divine manifestation of Lord Shiva as "Ghrneshwara" 
+                        - the Lord of Compassion at this sacred location.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">13th-14th Century Destruction</div>
+                        <p>The original temple structure was destroyed during the invasions by the Delhi Sultanate. 
+                        The temple went through several rounds of rebuilding followed by re-destruction during the 
+                        prolonged conflicts between Mughal forces and local rulers, leading to centuries of disruption 
+                        in continuous worship and pilgrimage activities.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">16th Century - Maratha Restoration</div>
+                        <p>Maloji Bhosale, the grandfather of the legendary Maratha king Chhatrapati Shivaji Maharaj, 
+                        first restored the temple in the 16th century. This restoration marked the beginning of renewed 
+                        Hindu patronage and the revival of pilgrimage traditions to this sacred Jyotirlinga site.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1729 CE - Ahilyabai Holkar's Reconstruction</div>
+                        <p>Queen Ahilyabai Holkar of Indore undertook the complete reconstruction of the temple in 1729, 
+                        giving it its current magnificent form. Known for restoring numerous temples across India including 
+                        Kashi Vishwanath and Somnath, she sponsored this project after the fall of the Mughal Empire, 
+                        ensuring the temple's architectural splendor and spiritual continuity.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">British Colonial Period</div>
+                        <p>During British rule, the temple maintained its religious significance with continued local 
+                        patronage. The proximity to the Ellora Caves, which gained recognition as an archaeological 
+                        marvel during this period, also brought scholarly and tourist attention to the Grishneshwar 
+                        Temple, highlighting its architectural and spiritual importance.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Modern Era (1960-Present)</div>
+                        <p>The temple was declared a national protected monument by the Archaeological Survey of India. 
+                        With improved transportation infrastructure, including Aurangabad Airport and railway connections, 
+                        the temple has become easily accessible to pilgrims worldwide. Modern facilities, VIP darshan 
+                        services, and accommodation options have enhanced the pilgrimage experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://aurangabadtourism.in/images/places-to-visit/header/ellora-caves-aurangabad-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Ellora Caves" class="temple-image">
+                    <div class="text-center mt-3">
+                        <h6 class="text-primary">Ellora Caves Heritage</h6>
+                        <p class="small">UNESCO World Heritage Site just 1.5 km from Grishneshwar Temple</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Marvel -->
+    <section id="architecture" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Marvel</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-3">Hemadpanthi Style Features</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>5-Layered Shikhara:</strong> Magnificent tower with intricate architectural details</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Black Stone Construction:</strong> Traditional dark stone giving temple its distinctive appearance</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Mythological Carvings:</strong> Elaborate sculptures depicting divine figures and stories</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Hemadpanthi Architecture:</strong> South Indian architectural style with Maratha influences</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Sanctum Sanctorum:</strong> Sacred inner chamber housing the Jyotirlinga</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://astitvaagro.in/wp-content/uploads/2025/06/GHRUNESHWAR-TEMPLE.jpg" alt="Temple Architecture" class="temple-image" style="height: 300px;">
+
+                    <div class="mt-4 p-3 bg-info bg-opacity-10 border-start border-info border-4">
+                        <h6 class="text-info mb-2">Architectural Uniqueness</h6>
+                        <p class="mb-0">Though smaller in size compared to other Jyotirlinga temples, Grishneshwar's 
+                        architectural beauty and spiritual power make it exceptional among the sacred twelve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Significance -->
+    <section id="significance" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spiritual Significance</h2>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.punyabhavna.in/cdn/shop/files/Remember_stayinghydratedisasimpleyetpowerfulactofself-care.Cheerstoyourhealth_3.png?v=1748429612" alt="Twelfth Jyotirlinga" class="gallery-image">
+                        <h5 class="mt-3">Final Jyotirlinga</h5>
+                        <p>The twelfth and concluding sacred Jyotirlinga completing the divine dozen of Lord Shiva</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://lostnews.org/wp-content/uploads/2025/09/Grishneshwar-Jyotirlinga-Temple-1024x536.png" alt="Lord of Compassion" class="gallery-image">
+                        <h5 class="mt-3">Lord of Compassion</h5>
+                        <p>Grishneshwar meaning "Lord of Compassion" - divine mercy and forgiveness for all devotees</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://myoksha.com/wp-content/uploads/2019/06/Explore-Aurangabad.jpg" alt="Heritage Connection" class="gallery-image">
+                        <h5 class="mt-3">Heritage Connection</h5>
+                        <p>Unique spiritual-cultural experience near UNESCO World Heritage Ellora Caves</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <h4 class="text-primary mb-3">Grishneshwar - Embodiment of Divine Compassion</h4>
+                    <p class="lead">Grishneshwar represents the culminating manifestation of Lord Shiva's compassionate nature 
+                    as the twelfth and final Jyotirlinga. The name "Ghrneshwara" translates to "Lord of Compassion," emphasizing 
+                    Shiva's merciful aspect that forgives devotees' sins and grants liberation. This temple's proximity to the 
+                    magnificent Ellora Caves creates a unique spiritual environment where ancient rock-cut artistry meets living 
+                    devotional practices, offering visitors an unparalleled experience of India's spiritual and cultural heritage.</p>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Divine Compassion Benefits</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-heart text-danger me-2"></i>Divine mercy and forgiveness of sins through compassionate grace</li>
+                            <li><i class="fas fa-peace text-info me-2"></i>Inner peace and emotional healing through Lord's merciful blessings</li>
+                            <li><i class="fas fa-shield-alt text-success me-2"></i>Protection from negative influences and life's hardships</li>
+                            <li><i class="fas fa-star text-warning me-2"></i>Spiritual completion through visiting the final Jyotirlinga</li>
+                            <li><i class="fas fa-family text-primary me-2"></i>Harmonious relationships and family prosperity through divine compassion</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-primary bg-opacity-10 rounded">
+                        <h6 class="text-primary mb-3">Sacred Mantras</h6>
+                        <p class="text-center fst-italic mb-2">"ॐ घृष्णेश्वराय नमः"</p>
+                        <p class="text-center fst-italic mb-3">"ॐ नमः शिवाय"</p>
+                        <hr>
+                        <h6 class="text-primary mb-3">Best Visit Times</h6>
+                        <ul class="small">
+                            <li>Shravan Month (Jul-Aug)</li>
+                            <li>Mahashivaratri (Feb/Mar)</li>
+                            <li>Winter months (Oct-Feb)</li>
+                            <li>Early morning darshan</li>
+                            <li>Monday fasting days</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Facilities -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Services & Facilities</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Temple Schedule</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Regular Days</th>
+                                    <th>Shravan Month</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Temple Opening</strong></td>
+                                    <td>5:00 AM</td>
+                                    <td>3:00 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Morning Aarti</strong></td>
+                                    <td>5:30 AM - 6:00 AM</td>
+                                    <td>5:30 AM - 6:00 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Morning Darshan</strong></td>
+                                    <td>5:00 AM - 12:00 PM</td>
+                                    <td>3:00 AM - 12:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Evening Darshan</strong></td>
+                                    <td>4:00 PM - 9:30 PM</td>
+                                    <td>4:00 PM - 11:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shej Aarti</strong></td>
+                                    <td>8:30 PM - 9:00 PM</td>
+                                    <td>10:00 PM - 10:30 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Special Services</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>Free</td>
+                                    <td>Open for all devotees</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>VIP Darshan</strong></td>
+                                    <td>₹500-700</td>
+                                    <td>Counter booking only</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rudrabhishek</strong></td>
+                                    <td>₹750-1,500</td>
+                                    <td>7:00-11:00 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maha Abhishekam</strong></td>
+                                    <td>₹2,100</td>
+                                    <td>12:00-1:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Special Puja</strong></td>
+                                    <td>Varies</td>
+                                    <td>Book 3 days advance</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h5>Temple Counter Booking</h5>
+                    <p>VIP Darshan available at temple counter. No official online booking - advance call recommended.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h5>Ellora Caves Tour</h5>
+                    <p>UNESCO World Heritage Site just 1.5 km away. Combined spiritual-cultural experience.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h5>Accommodation</h5>
+                    <p>Temple trust Bhakta Niwas, MTDC hotels, and private lodges in Aurangabad city.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h5>Transportation</h5>
+                    <p>30 km from Aurangabad. Regular buses, taxis, and private vehicles available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://hindfiri.com/wp-content/uploads/2023/10/20231022_234724_0000.png" alt="Grishneshwar Temple Main" class="gallery-image">
+                    <h6 class="mt-2 text-center">Main Temple Structure</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.ahospitalityclub.com/wp-content/uploads/2022/09/100j14000000w61dvCFD0-1024x768.jpg" alt="5-Layer Shikhara" class="gallery-image">
+                    <h6 class="mt-2 text-center">5-Layered Shikhara</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://thumbs.dreamstime.com/b/hemadpanthi-style-architecture-gondeshwar-temple-dedicated-to-shiva-hemadpanthi-style-architecture-gondeshwar-temple-267993337.jpg" alt="Hemadpanthi Architecture" class="gallery-image">
+                    <h6 class="mt-2 text-center">Hemadpanthi Architecture</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.shrighrishneshwar12thjyotirling.com/images/last-jyotriling.jpg" alt="Sacred Sanctum" class="gallery-image">
+                    <h6 class="mt-2 text-center">Sacred Sanctum</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://farm7.staticflickr.com/6218/6360177079_064ca981e3_z.jpg" alt="Ellora Caves Nearby" class="gallery-image">
+                    <h6 class="mt-2 text-center">Nearby Ellora Caves</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://myoksha.com/wp-content/uploads/2015/12/The-Grishneshwar-Temple.jpg" alt="Temple Complex" class="gallery-image">
+                    <h6 class="mt-2 text-center">Temple Complex View</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Links & Resources -->
+    <section id="official-links" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Official Links & Resources</h2>
+
+            <div class="official-links">
+                <a href="https://ghrishneshwar.com" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h6>Official Temple Website</h6>
+                    <p>Grishneshwar Temple official portal</p>
+                    <small class="text-muted">ghrishneshwar.com</small>
+                </a>
+
+                <a href="https://maharashtratourism.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h6>Maharashtra Tourism</h6>
+                    <p>Official state tourism portal</p>
+                    <small class="text-muted">Travel packages available</small>
+                </a>
+
+                <a href="https://chhatrapatisambhajinagar.maharashtra.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h6>District Administration</h6>
+                    <p>Chhatrapati Sambhajinagar district portal</p>
+                    <small class="text-muted">Government services</small>
+                </a>
+
+                <a href="https://www.incredibleindia.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h6>Incredible India</h6>
+                    <p>National tourism portal</p>
+                    <small class="text-muted">Temple heritage information</small>
+                </a>
+
+                <a href="https://grishneshwarjyotirling.org" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fa-solid fa-gopuram"></i>
+                    </div>
+                    <h6>Temple Trust</h6>
+                    <p>Puja and darshan information</p>
+                    <small class="text-muted">gmadtrust@gmail.com</small>
+                </a>
+
+                <a href="https://aurangabadtourism.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h6>Tourism Guide</h6>
+                    <p>Complete Aurangabad travel information</p>
+                    <small class="text-muted">Local tour operators</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Contact Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <strong>Temple Address:</strong><br>
+                            Grishneshwar Temple 12th Jyotirlinga<br>
+                            Ghrishneshwar Temple Road<br>
+                            Verul, Maharashtra - 431102<br>
+                            Aurangabad District
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <strong>Contact Numbers:</strong><br>
+                            +91-9422714413 (Temple Office)<br>
+                            +91-240-2400620 (Main Line)<br>
+                            +91-94222-07017 (Information)
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <strong>Email Contact:</strong><br>
+                            akshayvaidya5004@gmail.com<br>
+                            gmadtrust@gmail.com
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-globe contact-icon"></i>
+                            <strong>Official Website:</strong><br>
+                            <a href="https://ghrishneshwar.com" target="_blank" class="text-warning">ghrishneshwar.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Temple & Travel Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <strong>Temple Timings:</strong><br>
+                            Regular: 5:00 AM - 9:30 PM<br>
+                            Shravan: 3:00 AM - 11:00 PM<br>
+                            <small>Extended hours during festivals</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-car contact-icon"></i>
+                            <strong>Distance & Transport:</strong><br>
+                            From Aurangabad: 30 km<br>
+                            From Ellora Caves: 1.5 km<br>
+                            Regular buses, taxis available
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-plane contact-icon"></i>
+                            <strong>Nearest Connectivity:</strong><br>
+                            Aurangabad Airport: 35 km<br>
+                            Aurangabad Railway: 30 km<br>
+                            Mumbai: 300 km via highway
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-exclamation-triangle contact-icon"></i>
+                            <strong>Important Guidelines:</strong><br>
+                            Men go bare-chested in sanctum<br>
+                            Photography restricted in temple<br>
+                            Book special pujas 3 days advance
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-4 border-top border-secondary">
+                    <p class="mb-2">
+                        <i class="fas fa-quote-left text-warning me-2"></i>
+                        <span class="compassion-icon">🙏</span> "ॐ घृष्णेश्वराय नमः" <span class="compassion-icon">🙏</span>
+                    </p>
+                    <small class="text-muted">
+                        <em>Lord of Compassion - Twelfth and final Jyotirlinga near UNESCO World Heritage Ellora Caves</em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6><span class="compassion-icon">🙏</span> Grishneshwar Temple</h6>
+                    <p class="small mb-0">Twelfth Jyotirlinga - Lord of Compassion near UNESCO Ellora Caves</p>
+                    <p class="small mt-2">
+                        Official Website: <a href="https://ghrishneshwar.com" target="_blank" class="text-warning">ghrishneshwar.com</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">&copy; 2025 Grishneshwar Temple Portal. Created with devotion.</p>
+                    <p class="small mt-2">
+                        Contact: <span class="text-warning">+91-9422714413</span> | 
+                        <span class="text-warning">akshayvaidya5004@gmail.com</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 107, 53, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 107, 53, 0.95)';
+            }
+        });
+
+        // Image gallery lightbox effect
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src.replace('w=400&h=300', 'w=800&h=600');
+                modalImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;border-radius:10px;';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-collapse a');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // collapse navbar after clicking any link
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+                });
+                bsCollapse.hide();
+            });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trimbakeshwar Temple - Tenth Jyotirlinga of Lord Shiva</title>
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd700;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --orange-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: var(--orange-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -55%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .fact-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .architecture-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 107, 53, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .temple-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .official-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .special-notice {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .river-info {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffffff;
+        }
+
+        .trinity-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .river-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+                margin: 1rem 0;
+            }
+
+            .key-facts-grid,
+            .architecture-features,
+            .services-grid,
+            .official-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-om me-2"></i>Trimbakeshwar Temple
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#significance">Significance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Trimbakeshwar Temple</h1>
+                <p class="hero-subtitle"><span class="trinity-icon">🌊</span>Tridev Trinity - Tenth Sacred Jyotirlinga</p>
+                <p class="lead mb-4">
+                    Trimbakeshwar - Where the sacred Godavari River originates at Brahmagiri Hills, housing the unique 
+                    three-faced lingam representing Brahma, Vishnu, and Shiva in perfect trinity manifestation.
+                </p>
+                <a href="#overview" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-info-circle me-2"></i>Explore Temple
+                </a>
+                <a href="https://trimbakeshwartrust.com" target="_blank" class="btn btn-outline-primary bg-primary btn-lg">
+                    <i class="fas fa-external-link-alt me-2"></i>Official Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Overview -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temple Overview</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        <strong>The Trimbakeshwar Temple</strong>, located in Trimbak village near Nashik, Maharashtra, 
+                        is the tenth among the 12 sacred Jyotirlingas and holds the unique distinction of housing a 
+                        three-faced lingam representing the Tridev - Brahma, Vishnu, and Shiva. Situated at the foothills 
+                        of Brahmagiri Hills where the sacred Godavari River originates, this 18th-century temple built by 
+                        Peshwa Balaji Bajirao (1755-1786) attracts millions of devotees annually. The temple is renowned 
+                        for the Kushavarta Tirtha, a sacred pond located 400m from the temple, believed to be where 
+                        Ganga reemerges after disappearing at Brahmagiri Hills.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://imagedelivery.net/IEMzXmjRvW0g933AN5ejrA/wwwnotionso-image-prod-files-secures3us-west-2amazonawscom-0da87b11-5e1d-4762-99d5-edcbbb5df6df-45c0c2a7-cb85-41b2-9515-dd3c41395985-trimbakeshwar_hpjpg/public" alt="Trimbakeshwar Temple" class="temple-image">
+                </div>
+            </div>
+
+            <div class="river-info">
+                <h5><span class="river-icon">🌊</span>Sacred Godavari River Origin</h5>
+                <p class="mb-0">Witness the divine birth of Godavari River at Brahmagiri Hills. The temple sits at the exact 
+                source point of Maharashtra's longest river (1,465 km), making it a double pilgrimage - Jyotirlinga and river origin.</p>
+            </div>
+
+            <div class="special-notice">
+                <h5><span class="trinity-icon">🎯</span>Online VIP Darshan & Live Puja</h5>
+                <p class="mb-0">Book VIP Donation Darshan Passes online (counter charges may apply). 
+                Experience live online Rudrabhishek (₹2,100) and Laghurudra (₹21,000) pujas from home via video call.</p>
+            </div>
+
+            <div class="key-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-title">Built:</div>
+                    <p>1755-1786 CE by Peshwa Balaji Bajirao (Nanasaheb) on site of ancient temple</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Architecture:</div>
+                    <p>Black stone Hemadpanthi style with 20-25 ft boundary wall, four directional entry gates</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Location:</div>
+                    <p>Trimbak Village, 28 km from Nashik, Maharashtra - At foothills of Brahmagiri Hills</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Deity:</div>
+                    <p>Trimbakeshwar - Unique three-faced lingam representing Tridev (Brahma, Vishnu, Shiva)</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Significance:</div>
+                    <p>Tenth Jyotirlinga, Godavari River source, Kushavarta Tirtha, Kaal Sarp Dosh Nivaran center</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Visitors:</div>
+                    <p>Over 2 million pilgrims annually, peak during Shravan month and Mahashivaratri</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient Legend (Puranic Era)</div>
+                        <p>According to Shiva Purana, Sage Gautama performed penance at Brahmagiri Hills to bring 
+                        Ganga to earth. Lord Shiva was pleased and manifested the Godavari River, establishing himself 
+                        as Trimbakeshwar (three-faced form representing Tridev) at this sacred location.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient Temple Period</div>
+                        <p>An ancient temple existed at this site for centuries before the current structure. 
+                        Historical records indicate continuous worship and pilgrimage to this Jyotirlinga from 
+                        ancient times, with mentions in various Puranas and sacred texts.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1750 CE - Kushavarta Construction</div>
+                        <p>The sacred Kushavarta Tirtha (holy pond) was constructed in 1750, creating a 21-foot deep 
+                        reservoir believed to be where Ganga reemerges after disappearing at Brahmagiri Hills. 
+                        This enhanced the temple's spiritual significance significantly.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1755-1786 CE - Present Temple</div>
+                        <p>Peshwa Balaji Bajirao (Nanasaheb Peshwa) constructed the current magnificent temple using 
+                        black stone in Hemadpanthi architectural style. The temple features four directional gates 
+                        representing East (beginning), West (maturity), South (completion), and North (revelation).</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1954 CE - Trust Formation</div>
+                        <p>Shri Trimbakeshwar Sansthan was registered under Public Trust Registration Act in 1954, 
+                        formalizing temple administration. The trust manages daily three-time pooja, festivals, 
+                        and all religious activities throughout the year.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Modern Era (2000-Present)</div>
+                        <p>Development of modern facilities including Shivprasad Bhaktaniwas (24 rooms), online 
+                        booking systems, VIP darshan passes, and digital donation platforms. Introduction of 
+                        live online pujas accessible globally via video conferencing.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://sanatanajourney.com/wp-content/uploads/2025/06/trimbakeshwar-jyotirlinga-feature.webp" alt="Brahmagiri Hills" class="temple-image">
+                    <div class="text-center mt-3">
+                        <h6 class="text-primary">Brahmagiri Hills</h6>
+                        <p class="small">Sacred hills where Godavari River originates, surrounded by pristine nature</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Marvel -->
+    <section id="architecture" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Marvel</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-3">Hemadpanthi Style Features</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Black Stone Construction:</strong> Entirely built with local black stone giving majestic appearance</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Four Directional Gates:</strong> East, West, South, North representing spiritual journey stages</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Boundary Wall:</strong> 20-25 feet stone wall providing sacred enclosure</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Tridev Lingam:</strong> Unique three-faced lingam inside sanctum sanctorum</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Kushavarta Tirtha:</strong> Sacred 21-foot deep pond 400m from temple</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Trimbakeshwar_Temple-Nashik-Maharashtra-1.jpg/1200px-Trimbakeshwar_Temple-Nashik-Maharashtra-1.jpg" alt="Temple Architecture" class="temple-image" style="height: 350px;">
+
+                    <div class="mt-4 p-3 bg-info bg-opacity-10 border-start border-info border-4">
+                        <h6 class="text-info mb-2">Tridev Representation</h6>
+                        <p class="mb-0">The extraordinary three-faced lingam embodies Brahma (creator), Vishnu (preserver), 
+                        and Shiva (destroyer), representing the complete cycle of cosmic creation and destruction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Significance -->
+    <section id="significance" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spiritual Significance</h2>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://api.theindia.co.in/storage/image/places/image/trimbakeshwar-jyotirling-mandir-77840.jpg" alt="Tenth Jyotirlinga" class="gallery-image">
+                        <h5 class="mt-3">Tenth Jyotirlinga</h5>
+                        <p>The tenth among the 12 sacred Jyotirlingas featuring unique three-faced Tridev representation</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.hlimg.com/images/things2do/738X538/ttd_20181126164421154323086112065t.jpg" alt="Godavari Origin" class="gallery-image">
+                        <h5 class="mt-3">Godavari River Origin</h5>
+                        <p>Sacred birthplace of Maharashtra's longest river, making it a dual pilgrimage destination</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.tourmyindia.com/states/maharashtra/images/kushavarta-kund1.jpg" alt="Kushavarta Tirtha" class="gallery-image">
+                        <h5 class="mt-3">Kushavarta Tirtha</h5>
+                        <p>Sacred pond where Ganga reemerges, considered equally holy as Ganga at Haridwar</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <h4 class="text-primary mb-3">Trimbakeshwar - Lord of Trinity</h4>
+                    <p class="lead">Trimbakeshwar represents the unified power of the Tridev - Brahma (creator), Vishnu 
+                    (preserver), and Shiva (destroyer) in a single divine manifestation. The temple's location at 
+                    Godavari's origin makes it doubly sacred, as both river worship and Shiva worship converge here 
+                    in perfect spiritual harmony.</p>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Divine Blessings</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-trinity text-primary me-2"></i>Unity of creation, preservation, and destruction powers</li>
+                            <li><i class="fas fa-water text-info me-2"></i>Purification through sacred Godavari river origin waters</li>
+                            <li><i class="fas fa-shield-alt text-success me-2"></i>Protection from Kaal Sarp Dosh through special rituals</li>
+                            <li><i class="fas fa-star text-warning me-2"></i>Complete cosmic blessings from Tridev manifestation</li>
+                            <li><i class="fas fa-heart text-danger me-2"></i>Spiritual harmony and balanced life through trinity worship</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-primary bg-opacity-10 rounded">
+                        <h6 class="text-primary mb-3">Sacred Mantras</h6>
+                        <p class="text-center fst-italic mb-2">"ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्"</p>
+                        <p class="text-center fst-italic mb-3">"ॐ नमः शिवाय"</p>
+                        <hr>
+                        <h6 class="text-primary mb-3">Special Occasions</h6>
+                        <ul class="small">
+                            <li>Mahashivaratri (Feb/Mar)</li>
+                            <li>Shravan month (Jul-Aug)</li>
+                            <li>Ganga Dashahara (Jun)</li>
+                            <li>Kartik Poornima (Nov)</li>
+                            <li>Daily Kushavarta snaan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Facilities -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Services & Facilities</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Temple Schedule</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Regular Timings</th>
+                                    <th>Shravan Month</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Temple Opening</strong></td>
+                                    <td>7:00 AM</td>
+                                    <td>5:30 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>7:00 AM - 8:00 PM</td>
+                                    <td>5:30 AM - 9:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rudrabhishek</strong></td>
+                                    <td>7:00 AM - 8:30 AM</td>
+                                    <td>7:00 AM - 8:30 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Special Pooja</strong></td>
+                                    <td>7:00 AM, 1:00 PM, 4:30 PM</td>
+                                    <td>Same timings</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shiva Golden Crown</strong></td>
+                                    <td>4:30 PM - 5:00 PM</td>
+                                    <td>4:30 PM - 5:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Online Services</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>VIP Darshan Pass</strong></td>
+                                    <td>Varies</td>
+                                    <td>Online/Offline counters</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Online Rudrabhishek</strong></td>
+                                    <td>₹2,100</td>
+                                    <td>Live puja via video call</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Online Laghurudra</strong></td>
+                                    <td>₹21,000</td>
+                                    <td>Complete ritual online</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bhaktniwas Booking</strong></td>
+                                    <td>₹800-2,500</td>
+                                    <td>AC/Non-AC rooms</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h5>VIP Darshan Pass</h5>
+                    <p>Book donation darshan passes online or from offline counters near temple.</p>
+                    <a href="https://trimbakeshwartrust.com/onlinevip" target="_blank" class="btn btn-outline-primary btn-sm">Book Online</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h5>Live Online Puja</h5>
+                    <p>Participate in Rudrabhishek and Laghurudra pujas from home via video call.</p>
+                    <a href="https://trimbakeshwartrust.com/online-puja-booking" target="_blank" class="btn btn-outline-primary btn-sm">Book Puja</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h5>Shivprasad Bhaktniwas</h5>
+                    <p>Temple trust accommodation with 24 rooms. AC/Non-AC options available.</p>
+                    <a href="https://trimbakeshwartrust.com/bhaktniwas" target="_blank" class="btn btn-outline-primary btn-sm">Book Stay</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-donate"></i>
+                    </div>
+                    <h5>Online Donations</h5>
+                    <p>Support temple maintenance and community welfare programs through secure donations.</p>
+                    <a href="https://trimbakeshwartrust.com/donate" target="_blank" class="btn btn-outline-primary btn-sm">Donate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.stayvista.com/blog/wp-content/uploads/2024/12/Trimbakeshwar_Shiva_Temple_2005.jpg" alt="Trimbakeshwar Temple Main" class="gallery-image">
+                    <h6 class="mt-2 text-center">Temple Main Structure</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://i.ytimg.com/vi/scVE2qDoBYk/maxresdefault.jpg" alt="Black Stone Architecture" class="gallery-image">
+                    <h6 class="mt-2 text-center">Black Stone Architecture</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://studiogestalt.in/wp-content/uploads/2023/07/photo_6111471633526012085_y-570x400.webp" alt="Kushavarta Tirtha" class="gallery-image">
+                    <h6 class="mt-2 text-center">Kushavarta Sacred Pond</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://trimbakeshwartrust.com/public/assets/images/jyotirlinga-01.webp" alt="Tridev Lingam" class="gallery-image">
+                    <h6 class="mt-2 text-center">Three-faced Lingam</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.indiastudychannel.com/attachments/indiacities/56910-7-Origin-of-sacred-Godavari-near-Trimbakeshwar-temple-in-Nashik.jpeg" alt="Godavari Origin" class="gallery-image">
+                    <h6 class="mt-2 text-center">Godavari River Origin</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.shutterstock.com/shutterstock/videos/1030726031/thumb/1.jpg?ip=x480" alt="Temple Complex" class="gallery-image">
+                    <h6 class="mt-2 text-center">Temple Complex View</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Links & Resources -->
+    <section id="official-links" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Official Links & Resources</h2>
+
+            <div class="official-links">
+                <a href="https://trimbakeshwartrust.com" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h6>Official Website</h6>
+                    <p>Shri Trimbakeshwar Devasthan Trust portal</p>
+                    <small class="text-muted">trimbakeshwartrust.com</small>
+                </a>
+
+                <a href="https://trimbakeshwartrust.com/onlinevip" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h6>VIP Darshan Booking</h6>
+                    <p>Online donation darshan pass booking</p>
+                    <small class="text-muted">Payment queries: 9422247488</small>
+                </a>
+
+                <a href="https://trimbakeshwartrust.com/online-puja-booking" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h6>Live Online Puja</h6>
+                    <p>Rudrabhishek & Laghurudra via video call</p>
+                    <small class="text-muted">₹2,100 - ₹21,000</small>
+                </a>
+
+                <a href="https://trimbakeshwartrust.com/bhaktniwas" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h6>Shivprasad Bhaktniwas</h6>
+                    <p>Temple trust accommodation booking</p>
+                    <small class="text-muted">24 rooms, AC/Non-AC</small>
+                </a>
+
+                <a href="https://nashik.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h6>Nashik District</h6>
+                    <p>Official government portal</p>
+                    <small class="text-muted">Government of Maharashtra</small>
+                </a>
+
+                <a href="https://www.trimbakeshwar.org" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h6>Pandit Services</h6>
+                    <p>Professional priest booking portal</p>
+                    <small class="text-muted">Kaal Sarp Dosh specialists</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Contact Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <strong>Temple Address:</strong><br>
+                            Trimbakeshwar Jyotirling Mandir<br>
+                            Public Trust No A-405<br>
+                            Shree Shektra Trimbakeshwar<br>
+                            Trimbak, Maharashtra - 422212
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <strong>Trust Office:</strong><br>
+                            (02594) 233215 (Main office)<br>
+                            (02594) 234251 (Bhaktniwas)<br>
+                            +91-9422247488 (Payment queries)
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <strong>Email Contacts:</strong><br>
+                            trimbakeshwartrust@gmail.com<br>
+                            trimbakeshwartrust2015@gmail.com
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-globe contact-icon"></i>
+                            <strong>Official Website:</strong><br>
+                            <a href="https://trimbakeshwartrust.com" target="_blank" class="text-warning">trimbakeshwartrust.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Temple & Services Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <strong>Temple Timings:</strong><br>
+                            Regular: 7:00 AM - 8:00 PM<br>
+                            Shravan: 5:30 AM - 9:00 PM<br>
+                            <small>(Timings may vary on special days)</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-water contact-icon"></i>
+                            <strong>Kushavarta Tirtha:</strong><br>
+                            400m from temple<br>
+                            21 feet deep sacred pond<br>
+                            Built in 1750 CE
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-car contact-icon"></i>
+                            <strong>Location:</strong><br>
+                            28 km from Nashik city<br>
+                            Brahmagiri Hills foothills<br>
+                            Well-connected by road
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-bed contact-icon"></i>
+                            <strong>Accommodation:</strong><br>
+                            Shivprasad Bhaktniwas: 24 rooms<br>
+                            Near bus stand, Mahadevi Road<br>
+                            Check-in: 1:00 PM, Check-out: 12:00 Noon
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-4 border-top border-secondary">
+                    <p class="mb-2">
+                        <i class="fas fa-quote-left text-warning me-2"></i>
+                        <span class="trinity-icon">🌊</span> "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्" <span class="trinity-icon">🌊</span>
+                    </p>
+                    <small class="text-muted">
+                        <em>Where the sacred Godavari begins and the Tridev trinity blesses devotees</em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6><span class="trinity-icon">🌊</span> Trimbakeshwar Temple</h6>
+                    <p class="small mb-0">Tenth Jyotirlinga - Sacred Tridev trinity at Godavari River origin</p>
+                    <p class="small mt-2">
+                        Official Website: <a href="https://trimbakeshwartrust.com" target="_blank" class="text-warning">trimbakeshwartrust.com</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">&copy; 2025 Trimbakeshwar Temple Portal. Created with devotion.</p>
+                    <p class="small mt-2">
+                        Contact: <span class="text-warning">(02594) 233215</span> | 
+                        <span class="text-warning">trimbakeshwartrust@gmail.com</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 107, 53, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 107, 53, 0.95)';
+            }
+        });
+
+        // Image gallery lightbox effect
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src.replace('w=400&h=300', 'w=800&h=600');
+                modalImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;border-radius:10px;';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-collapse a');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // collapse navbar after clicking any link
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+                });
+                bsCollapse.hide();
+            });
+            });
+        });
+    </script>
+</body>
+</html>

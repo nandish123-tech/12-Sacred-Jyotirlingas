@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaidyanath Temple - Eighth Jyotirlinga of Lord Shiva</title>
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd700;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --orange-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: var(--orange-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -55%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .fact-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .architecture-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 107, 53, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .temple-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .official-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .special-notice {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .healing-info {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffffff;
+        }
+
+        .physician-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .shakti-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+                margin: 1rem 0;
+            }
+
+            .key-facts-grid,
+            .architecture-features,
+            .services-grid,
+            .official-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-om me-2"></i>Vaidyanath Temple
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#significance">Significance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Vaidyanath Temple</h1>
+                <p class="hero-subtitle"><span class="physician-icon">🏥</span>Divine Physician - Eighth Sacred Jyotirlinga</p>
+                <p class="lead mb-4">
+                    Vaidyanath - Known as Baba Baidyanath Dham, where Lord Shiva manifests as the "Divine Physician" 
+                    with miraculous healing powers, also blessed as one of the 51 sacred Shakti Peethas in Deoghar, Jharkhand.
+                </p>
+                <a href="#overview" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-info-circle me-2"></i>Explore Temple
+                </a>
+                <a href="https://babadham.org" target="_blank" class="btn btn-outline-primary bg-primary btn-lg">
+                    <i class="fas fa-external-link-alt me-2"></i>Official Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Overview -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temple Overview</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        <strong>The Vaidyanath Temple</strong>, popularly known as Baba Baidyanath Dham, located in Deoghar, 
+                        Jharkhand, is the eighth among the 12 sacred Jyotirlingas and holds the unique distinction of being 
+                        both a Jyotirlinga and one of the 51 Shakti Peethas. Built by Raja Puran Mal of Gidhaur in the 16th 
+                        century, this 72-foot tall temple attracts over 75 lakh pilgrims annually, especially during the 
+                        famous Shravan month when devotees undertake the 108 km Kanwar Yatra from Sultanganj. Lord Shiva is 
+                        worshipped here as "Vaidyanath" (Divine Physician) with legendary healing powers, while Goddess Parvati 
+                        is revered as "Jaya Durga" where her heart is believed to have fallen.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Baba_Baidyanath_Jyotirlinga_Temple.jpg" alt="Vaidyanath Temple" class="temple-image">
+                </div>
+            </div>
+
+            <div class="healing-info">
+                <h5><span class="physician-icon">🏥</span>Divine Physician & Shakti Peeth</h5>
+                <p class="mb-0">Unique convergence of Shiva and Shakti - Vaidyanath Jyotirlinga with miraculous healing powers 
+                and Shakti Peeth where Goddess Sati's heart fell. Devotees experience divine healing and spiritual awakening.</p>
+            </div>
+
+            <div class="special-notice">
+                <h5><span class="shakti-icon">🎫</span>Online VIP Darshan & Rudrabhishek</h5>
+                <p class="mb-0">Book VIP Darshan (₹500) and various poojas online through official website. 
+                Temple timings: Morning 4:00 AM-3:30 PM, Evening 6:00 PM-9:00 PM. Special abhishekam available daily from 4:00 AM.</p>
+            </div>
+
+            <div class="key-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-title">Built:</div>
+                    <p>16th century CE by Raja Puran Mal, King of Gidhaur, with subsequent renovations and additions</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Architecture:</div>
+                    <p>72 feet tall structure, blend of Nagara and Dravidian elements, 119 sq km temple complex area</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Location:</div>
+                    <p>Deoghar, Santhal Parganas, Jharkhand - 7 km from Jasidih Junction railway station</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Deity:</div>
+                    <p>Vaidyanath/Baidyanath Jyotirlinga - Lord Shiva as "Divine Physician" with healing powers</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Significance:</div>
+                    <p>Eighth Jyotirlinga, 51st Shakti Peeth, Shravan Kanwar Yatra destination, divine healing center</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Visitors:</div>
+                    <p>75+ lakh pilgrims annually, 30+ lakh during Shravan month Kanwar Yatra from Sultanganj</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient Legend (Puranic Era)</div>
+                        <p>According to Shiva Purana, when Ravana was returning to Lanka after receiving the Atmalinga 
+                        from Lord Shiva at Kailash, he stopped at Deoghar due to nature's call. The lingam got established 
+                        here permanently when Ravana couldn't lift it again, manifesting as Vaidyanath (Divine Physician).</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Shakti Peeth Legend</div>
+                        <p>During Lord Vishnu's Sudarshan Chakra dismemberment of Goddess Sati's body, her heart fell at 
+                        Deoghar, establishing it as one of the 51 Shakti Peethas. She is worshipped here as "Jaya Durga," 
+                        creating a unique confluence of Shiva and Shakti energies.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">16th Century CE</div>
+                        <p>Raja Puran Mal, King of Gidhaur, constructed the present temple structure after receiving 
+                        divine inspiration. The 72-foot tall temple was built with intricate architectural details 
+                        blending Nagara and Dravidian styles, establishing formal worship protocols.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">British Colonial Period</div>
+                        <p>Despite colonial challenges, the temple maintained its significance with continuous devotee 
+                        patronage. The famous Kanwar Yatra tradition from Sultanganj to Deoghar strengthened during 
+                        this period, with British records documenting massive pilgrim gatherings.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015-2016 Modern Administration</div>
+                        <p>Jharkhand government enacted the "Baba Baidyanath Dham-Basukinath Shrine Area Development 
+                        Authority Act, 2015 (Act No. 6 of 2016)" establishing a 5-member management committee under 
+                        IAS administration for systematic temple governance and development.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Present Era (2020-2025)</div>
+                        <p>Introduction of online booking systems, VIP darshan facilities, digital payment methods, 
+                        and modern amenities. Development of Deoghar Airport (12 km away) improved connectivity. 
+                        Temple now handles 75+ lakh visitors annually with world-class infrastructure.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://www.alightindia.com/cdn/uploads/postimages/ORIGINAL/baid1--aff07c.jpg" alt="Temple Complex" class="temple-image">
+                    <div class="text-center mt-3">
+                        <h6 class="text-primary">72 Feet Temple</h6>
+                        <p class="small">Majestic temple built by Raja Puran Mal with divine healing powers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Marvel -->
+    <section id="architecture" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Marvel</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-3">Nagara-Dravidian Fusion</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>72 Feet Height:</strong> Imposing temple tower visible from considerable distance</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Architectural Blend:</strong> Unique fusion of North Indian Nagara and South Indian Dravidian styles</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Temple Complex:</strong> 119 square kilometers sprawling sacred area with multiple shrines</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Swayambhu Lingam:</strong> Self-manifested lingam in dimly lit sanctum sanctorum</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Dual Sanctity:</strong> Jyotirlinga and Shakti Peeth shrines in same complex</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://sanatanashutter.com/wp-content/uploads/2025/03/Vaidyanath-Jyothirlinga.jpg" alt="Temple Architecture" class="temple-image">
+
+                    <div class="mt-4 p-3 bg-info bg-opacity-10 border-start border-info border-4">
+                        <h6 class="text-info mb-2">Healing Sanctuary</h6>
+                        <p class="mb-0">The temple's architecture is designed to enhance spiritual healing energies, 
+                        with specific positioning and sacred geometry promoting divine physician powers of Lord Vaidyanath.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Significance -->
+    <section id="significance" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spiritual Significance</h2>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://shreeharsiddhi.com/wp-content/uploads/2023/09/Vaidyanath-Jyotirlinga-Gateway-to-Spiritual-Wellness-and-Transformation-1200x675.png" alt="Eighth Jyotirlinga" class="gallery-image">
+                        <h5 class="mt-3">Eighth Jyotirlinga</h5>
+                        <p>Sacred Vaidyanath Jyotirlinga where Lord Shiva manifests as the Divine Physician with healing powers</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.alightindia.com/cdn/uploads/postimages/ORIGINAL/baidyanath%20temple%20%20curly%20tales--ca9f7f.jpg" alt="Shakti Peeth" class="gallery-image">
+                        <h5 class="mt-3">51st Shakti Peeth</h5>
+                        <p>Where Goddess Sati's heart fell, worshipped as Jaya Durga in unique Shiva-Shakti convergence</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://blog.yatradham.org/wp-content/uploads/2021/07/kanwar-yatra-blog-img.jpg" alt="Kanwar Yatra" class="gallery-image">
+                        <h5 class="mt-3">Kanwar Yatra</h5>
+                        <p>Sacred 108 km pilgrimage from Sultanganj to Deoghar during Shravan month attracts crores</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <h4 class="text-primary mb-3">Vaidyanath - The Divine Physician</h4>
+                    <p class="lead">Vaidyanath represents Lord Shiva's supreme healing powers, both physical and spiritual. 
+                    The temple's unique status as both Jyotirlinga and Shakti Peeth creates an extraordinary energy field 
+                    where devotees experience miraculous healings, spiritual transformation, and divine blessings from 
+                    the unified cosmic powers of Shiva and Shakti.</p>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Divine Healing Benefits</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-heartbeat text-danger me-2"></i>Miraculous healing of chronic diseases and ailments</li>
+                            <li><i class="fas fa-brain text-primary me-2"></i>Mental peace, stress relief, and emotional healing</li>
+                            <li><i class="fas fa-shield-alt text-success me-2"></i>Protection from negative energies and evil influences</li>
+                            <li><i class="fas fa-star text-warning me-2"></i>Spiritual awakening through Shiva-Shakti unified energy</li>
+                            <li><i class="fas fa-family text-info me-2"></i>Family harmony, prosperity, and overall well-being</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-primary bg-opacity-10 rounded">
+                        <h6 class="text-primary mb-3">Sacred Mantras</h6>
+                        <p class="text-center fst-italic mb-2">"ॐ वैद्यनाथाय नमः"</p>
+                        <p class="text-center fst-italic mb-3">"ॐ नमः शिवाय"</p>
+                        <hr>
+                        <h6 class="text-primary mb-3">Major Festivals</h6>
+                        <ul class="small">
+                            <li>Shravan Kanwar Yatra (Jul-Aug)</li>
+                            <li>Mahashivaratri (Feb/Mar)</li>
+                            <li>Basant Panchami (Feb)</li>
+                            <li>Jaya Durga celebration</li>
+                            <li>Monthly Somwar fasting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Facilities -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Services & Facilities</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Temple Schedule</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Timings</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Temple Opening</strong></td>
+                                    <td>4:00 AM</td>
+                                    <td>Door (Patt) opens daily</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Kancha Jal</strong></td>
+                                    <td>4:10 AM</td>
+                                    <td>First water offering</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Morning Darshan</strong></td>
+                                    <td>4:00 AM - 3:30 PM</td>
+                                    <td>Continuous darshan</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Midday Break</strong></td>
+                                    <td>2:00 PM - 6:00 PM</td>
+                                    <td>Door closed for rest</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shringar Puja</strong></td>
+                                    <td>6:10 PM</td>
+                                    <td>Evening decoration ritual</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Evening Darshan</strong></td>
+                                    <td>6:00 PM - 9:00 PM</td>
+                                    <td>Temple closes 9:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Online Services & Pricing</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price</th>
+                                    <th>Benefits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>Free</td>
+                                    <td>Regular queue entry</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>VIP Darshan</strong></td>
+                                    <td>₹500</td>
+                                    <td>Faster entry, priority access</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Panchoupchar Puja</strong></td>
+                                    <td>₹2,500</td>
+                                    <td>5-step traditional worship</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Dasoupchar Puja</strong></td>
+                                    <td>₹4,100</td>
+                                    <td>10-step elaborate ritual</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shodashoupchar</strong></td>
+                                    <td>₹6,100</td>
+                                    <td>16-step complete worship</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h5>Online Booking</h5>
+                    <p>Book VIP darshan, special poojas, and abhishekam through official website portal.</p>
+                    <a href="https://babadham.org" target="_blank" class="btn btn-outline-primary btn-sm">Book Now</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h5>Accommodation</h5>
+                    <p>Wide range of budget-friendly lodges, mid-range hotels, and luxury stays available.</p>
+                    <a href="https://babadham.org/accomodation/" target="_blank" class="btn btn-outline-primary btn-sm">View Options</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h5>Connectivity</h5>
+                    <p>Deoghar Airport (12 km), Jasidih Junction (7 km), regular bus services from major cities.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h5>24/7 Support</h5>
+                    <p>Dedicated helpline for bookings, information, and pilgrim assistance services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://blessingsonthenet.com/img/gallery/aim_bn_3_1310380593.jpg" alt="Vaidyanath Temple Main" class="gallery-image">
+                    <h6 class="mt-2 text-center">72 Feet Temple Tower</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.alightindia.com/cdn/uploads/postimages/ORIGINAL/baid1--aff07c.jpg" alt="Temple Complex" class="gallery-image">
+                    <h6 class="mt-2 text-center">Temple Complex</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.rudrakshahub.com/cdn/shop/articles/Baidyanath_Temple_blog.svg?v=1756211444&width=1920" alt="Sanctum Sanctorum" class="gallery-image">
+                    <h6 class="mt-2 text-center">Sacred Sanctum</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://i.pinimg.com/736x/6c/66/8a/6c668a013f7df42493f123edf3e3cc20.jpg" alt="Swayambhu Lingam" class="gallery-image">
+                    <h6 class="mt-2 text-center">Swayambhu Jyotirlinga</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://baidyanathnagri.com/wp-content/uploads/2021/01/kanwar-yatra-1498668251.jpg" alt="Kanwar Yatra" class="gallery-image">
+                    <h6 class="mt-2 text-center">Kanwar Yatra Pilgrims</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://temple.yatradham.org/public/Product/puja-rituals/puja-rituals_GzkkmlDi_202404261149150.jpg" alt="Evening Aarti" class="gallery-image">
+                    <h6 class="mt-2 text-center">Evening Aarti</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Links & Resources -->
+    <section id="official-links" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Official Links & Resources</h2>
+
+            <div class="official-links">
+                <a href="https://babadham.org" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h6>Official Website</h6>
+                    <p>Baba Baidyanath Temple Management Board</p>
+                    <small class="text-muted">babadham.org</small>
+                </a>
+
+                <a href="https://babadham.org/contact-us/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h6>Contact & Bookings</h6>
+                    <p>Official contact and online booking portal</p>
+                    <small class="text-muted">VIP Darshan & Puja booking</small>
+                </a>
+
+                <a href="https://babadham.org/accomodation/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h6>Accommodation</h6>
+                    <p>Complete lodging and hotel information</p>
+                    <small class="text-muted">Budget to luxury options</small>
+                </a>
+
+                <a href="https://deoghar.nic.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h6>District Administration</h6>
+                    <p>Deoghar District Government portal</p>
+                    <small class="text-muted">Government of Jharkhand</small>
+                </a>
+
+                <a href="https://tourism.jharkhand.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h6>Jharkhand Tourism</h6>
+                    <p>Official state tourism information</p>
+                    <small class="text-muted">Travel packages available</small>
+                </a>
+
+                <a href="https://www.jharkhand.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h6>Jharkhand Government</h6>
+                    <p>Official state government portal</p>
+                    <small class="text-muted">jharkhand.gov.in</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Contact Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <strong>Temple Address:</strong><br>
+                            Baba Baidyanath Temple Administrative Building<br>
+                            Baba Mandir Campus<br>
+                            Deoghar - 814112<br>
+                            Jharkhand, India
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <strong>Contact Numbers:</strong><br>
+                            +91-6432-232295 (Temple Main)<br>
+                            +91-9470928453 (Helpline)<br>
+                            +91-7766829553 (Support)
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <strong>Email Contacts:</strong><br>
+                            contact@babadham.org<br>
+                            support@babadham.org
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-user-tie contact-icon"></i>
+                            <strong>Administration:</strong><br>
+                            Administrator: Sri Naman Priyesh Lakra (IAS)<br>
+                            Deputy Commissioner, Deoghar<br>
+                            Temple Incharge: Sri Ravi Kumar (IAS)
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Temple & Travel Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <strong>Temple Timings:</strong><br>
+                            Monday-Saturday: 4:00 AM - 9:00 PM<br>
+                            Sunday: 4:30 AM - 9:30 PM<br>
+                            <small>Break: 2:00 PM - 6:00 PM daily</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-train contact-icon"></i>
+                            <strong>Nearest Railway:</strong><br>
+                            Jasidih Junction (JSME) - 7 km<br>
+                            Well connected to Kolkata, Patna, Ranchi<br>
+                            Auto/taxi services available (₹20-150)
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-plane contact-icon"></i>
+                            <strong>Airport Connectivity:</strong><br>
+                            Deoghar Airport - 12 km (operational)<br>
+                            Patna Airport - 300 km<br>
+                            Ranchi Airport - 250 km
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-info-circle contact-icon"></i>
+                            <strong>Important Guidelines:</strong><br>
+                            Mobile phones/cameras prohibited inside<br>
+                            Free general darshan available<br>
+                            Peak season: Shravan month (July-August)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-4 border-top border-secondary">
+                    <p class="mb-2">
+                        <i class="fas fa-quote-left text-warning me-2"></i>
+                        <span class="physician-icon">🏥</span> "ॐ वैद्यनाथाय नमः" <span class="physician-icon">🏥</span>
+                    </p>
+                    <small class="text-muted">
+                        <em>Divine Physician where Lord Shiva heals both body and soul with miraculous powers</em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6><span class="physician-icon">🏥</span> Vaidyanath Temple</h6>
+                    <p class="small mb-0">Eighth Jyotirlinga & 51st Shakti Peeth - Divine healing sanctuary in Deoghar</p>
+                    <p class="small mt-2">
+                        Official Website: <a href="https://babadham.org" target="_blank" class="text-warning">babadham.org</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">&copy; 2025 Vaidyanath Temple Portal. Created with devotion.</p>
+                    <p class="small mt-2">
+                        Contact: <span class="text-warning">+91-6432-232295</span> | 
+                        <span class="text-warning">contact@babadham.org</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 107, 53, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 107, 53, 0.95)';
+            }
+        });
+
+        // Image gallery lightbox effect
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src.replace('w=400&h=300', 'w=800&h=600');
+                modalImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;border-radius:10px;';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-collapse a');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // collapse navbar after clicking any link
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+                });
+                bsCollapse.hide();
+            });
+            });
+        });
+    </script>
+</body>
+</html>

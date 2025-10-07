@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedarnath Temple - Fifth Jyotirlinga of Lord Shiva</title>
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd700;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --orange-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: var(--orange-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -55%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .fact-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .architecture-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 107, 53, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .temple-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .official-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .special-notice {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .seasonal-info {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffffff;
+        }
+
+        .mountain-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+                margin: 1rem 0;
+            }
+
+            .key-facts-grid,
+            .architecture-features,
+            .services-grid,
+            .official-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-om me-2"></i>Kedarnath Temple
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#significance">Significance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Kedarnath Temple</h1>
+                <p class="hero-subtitle"><span class="mountain-icon">🏔️</span>Lord of the Peaks - Fifth Divine Jyotirlinga</p>
+                <p class="lead mb-4">
+                    Kedarnath - At 3,583 meters in the majestic Himalayas, where Lord Shiva resides in his most serene form, 
+                    accessible only to the most devoted pilgrims who undertake the sacred journey through pristine mountain paths.
+                </p>
+                <a href="#overview" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-info-circle me-2"></i>Explore Temple
+                </a>
+                <a href="https://badrinath-kedarnath.gov.in" target="_blank" class="btn btn-outline-primary bg-primary btn-lg">
+                    <i class="fas fa-external-link-alt me-2"></i>Official Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Overview -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temple Overview</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        <strong>The Kedarnath Temple</strong>, perched at an altitude of 3,583 meters in the Garhwal Himalayas of 
+                        Uttarakhand, is the fifth and highest among the 12 sacred Jyotirlingas. This ancient stone temple, 
+                        dedicated to Lord Shiva as Kedarnath (Lord of the Field), requires a challenging 18 km trek from 
+                        Gaurikund, making it one of India's most spiritually rewarding pilgrimages. Part of the Char Dham circuit, 
+                        this millennium-old shrine attracts hundreds of thousands of devotees annually during its 6-month opening season.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kedarnath_Temple_in_Rainy_season.jpg" alt="Kedarnath Temple" class="temple-image">
+                </div>
+            </div>
+
+            <div class="seasonal-info">
+                <h5><span class="mountain-icon">❄️</span>Seasonal Opening 2025</h5>
+                <p class="mb-0">Temple opens: <strong>May 2, 2025 at 7:00 AM</strong> | Closes: <strong>November 2025 (Kartik Poornima)</strong><br>
+                Best time to visit: May-June & September-October. Winter closure due to heavy snowfall and extreme weather conditions.</p>
+            </div>
+
+            <div class="special-notice">
+                <h5><span class="mountain-icon">🚁</span>Helicopter Services Available</h5>
+                <p class="mb-0">Skip the 18 km trek with helicopter services from Phata, Sersi, and Guptkashi helipads. 
+                Booking only through IRCTC Heli Yatra. Advance UTDB registration mandatory for all pilgrims.</p>
+            </div>
+
+            <div class="key-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-title">Built:</div>
+                    <p>8th-9th century CE by Pandava brothers (legend) and Adi Shankaracharya, reconstructed multiple times</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Architecture:</div>
+                    <p>Ancient stone construction with Kattyuri-Katyuri style, designed to withstand harsh Himalayan conditions</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Location:</div>
+                    <p>Rudraprayag District, Uttarakhand - 3,583 meters altitude near Mandakini River source</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Deity:</div>
+                    <p>Kedarnath Jyotirlinga - Lord Shiva as "Kedarnath" (Lord of the Field), pyramidal rock formation</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Significance:</div>
+                    <p>Fifth Jyotirlinga, highest among all, part of Char Dham and Panch Kedar pilgrimage circuits</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Visitors:</div>
+                    <p>Over 600,000 pilgrims annually during 6-month season, including domestic and international devotees</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient Legend (Mahabharata Era)</div>
+                        <p>According to Shiva Purana and Mahabharata, the Pandava brothers sought Lord Shiva's forgiveness 
+                        after the Kurukshetra war. Shiva, avoiding them, took the form of a bull. When Bhima tried to catch 
+                        him, Shiva disappeared, leaving behind his hump at Kedarnath.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">8th-9th Century CE</div>
+                        <p>Adi Shankaracharya discovered the original temple and established it as one of the primary 
+                        Jyotirlingas. He also set up the present form of worship and appointed the main priest tradition 
+                        that continues today from Karnataka (Jangama community).</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">11th-14th Century</div>
+                        <p>Temple gained prominence during various dynasties including Katyuri and Chand rulers. 
+                        Multiple reconstructions due to natural calamities including earthquakes and avalanches. 
+                        Pilgrimage tradition firmly established during this period.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1803-1947 CE</div>
+                        <p>British period documentation shows regular pilgrimages. Temple administration formalized under 
+                        princely states. Significant repair and restoration work undertaken during Tehri Garhwal kingdom 
+                        period with royal patronage.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2013 Kedarnath Disaster</div>
+                        <p>Devastating flash floods and landslides caused massive destruction. Temple structure miraculously 
+                        survived while surrounding area was destroyed. This led to the temple being called "divinely protected" 
+                        by devotees worldwide.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Present Day (2014-2025)</div>
+                        <p>Comprehensive reconstruction and infrastructure development by Government of Uttarakhand. 
+                        Modern facilities, helicopter services, improved trekking routes, and online systems established. 
+                        Temple administration under Badrinath-Kedarnath Temple Committee (BKTC).</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://merobharat.com/wp-content/uploads/2025/03/shri-kedarnath-temple_06-ezgif.com-png-to-webp-converter-1024x683.webp" alt="Himalayan Temple" class="temple-image">
+                    <div class="text-center mt-3">
+                        <h6 class="text-primary">Miracle of 2013</h6>
+                        <p class="small">Temple survived devastating floods untouched, reinforcing divine protection belief</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Marvel -->
+    <section id="architecture" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Marvel</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-3">Himalayan Temple Architecture</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Stone Construction:</strong> Massive granite stones without mortar, earthquake-resistant design</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Pyramid Structure:</strong> Unique pyramidal stone formation housing the sacred lingam</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Katyuri Style:</strong> Ancient mountain architecture adapted for extreme weather conditions</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Mandapa Hall:</strong> Simple yet elegant pillared hall for assembly and prayers</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Altitude Design:</strong> Engineered to withstand heavy snowfall and avalanche conditions</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://www.manchalamushafir.com/things-to-know-about-the-kedarnath-temple/images/Opening%20and%20Closing%20Datest%20Kedarnath%20Temple.webp" alt="Temple Architecture" class="temple-image" style="height: 350px;">
+
+                    <div class="mt-4 p-3 bg-info bg-opacity-10 border-start border-info border-4">
+                        <h6 class="text-info mb-2">Panch Kedar Circuit</h6>
+                        <p class="mb-0">Kedarnath is the main temple in the Panch Kedar (Five Kedars) circuit, where 
+                        different body parts of Lord Shiva are worshipped across five sacred locations in Garhwal Himalayas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Significance -->
+    <section id="significance" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spiritual Significance</h2>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://kedarnathtemple.com/wp-content/uploads/2022/12/kedarnath-original-shivling.jpg" alt="Fifth Jyotirlinga" class="gallery-image">
+                        <h5 class="mt-3">Fifth Jyotirlinga</h5>
+                        <p>The highest and most challenging Jyotirlinga, representing Lord Shiva's supreme presence in the Himalayas</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.chardhamhotel.in/blog/wp-content/uploads/2024/05/Char-Dham-Yatra-Route-Map.jpg" alt="Char Dham" class="gallery-image">
+                        <h5 class="mt-3">Char Dham Circuit</h5>
+                        <p>One of four sacred Char Dham pilgrimage sites, essential for spiritual liberation and moksha</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://mountainschaintravel.com/Dashboard/Assets/Images/Upcoming_packages/panch-kedar-tour-package.jpg" alt="Panch Kedar" class="gallery-image">
+                        <h5 class="mt-3">Panch Kedar Main</h5>
+                        <p>Primary temple among five Kedar shrines where Shiva's hump appeared after Pandava encounter</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <h4 class="text-primary mb-3">Lord of the Himalayas</h4>
+                    <p class="lead">Kedarnath represents Lord Shiva in his most serene and meditative form amidst the pristine 
+                    Himalayas. The difficult journey to reach the temple symbolizes the spiritual effort required for 
+                    divine realization, making the darshan deeply transformative for devoted pilgrims.</p>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Divine Blessings</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-mountain text-success me-2"></i>Spiritual elevation and connection with divine consciousness</li>
+                            <li><i class="fas fa-heart text-danger me-2"></i>Purification of sins and negative karma through difficult pilgrimage</li>
+                            <li><i class="fas fa-shield-alt text-primary me-2"></i>Divine protection from life's obstacles and challenges</li>
+                            <li><i class="fas fa-peace text-info me-2"></i>Inner peace and mental clarity through Himalayan meditation</li>
+                            <li><i class="fas fa-star text-warning me-2"></i>Liberation (moksha) and spiritual enlightenment for sincere devotees</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-primary bg-opacity-10 rounded">
+                        <h6 class="text-primary mb-3">Sacred Mantras</h6>
+                        <p class="text-center fst-italic mb-2">"ॐ केदारनाथाय नमः"</p>
+                        <p class="text-center fst-italic mb-3">"ॐ नमः शिवाय"</p>
+                        <hr>
+                        <h6 class="text-primary mb-3">Pilgrimage Season</h6>
+                        <ul class="small">
+                            <li>Opening: May 2, 2025</li>
+                            <li>Best Time: May-June</li>
+                            <li>Monsoon: July-August (risky)</li>
+                            <li>Post-monsoon: September-October</li>
+                            <li>Closing: November 2025</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Facilities -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Services & Facilities</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Darshan Services</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Darshan Type</th>
+                                    <th>Timings</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>4:00 AM - 3:00 PM<br>5:00 PM - 8:00 PM</td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Morning Aarti</strong></td>
+                                    <td>4:00 AM - 7:00 AM</td>
+                                    <td>Included</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Evening Aarti</strong></td>
+                                    <td>5:00 PM - 8:00 PM</td>
+                                    <td>Included</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Helicopter Return</strong></td>
+                                    <td>Weather dependent</td>
+                                    <td>₹3,200-4,200 per person</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Special Sevas</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Seva</th>
+                                    <th>Price Range</th>
+                                    <th>Benefits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Rudrabhishek</strong></td>
+                                    <td>₹6,500</td>
+                                    <td>Divine blessings</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mahabhishek</strong></td>
+                                    <td>₹8,500</td>
+                                    <td>Complete purification</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shodashopachar</strong></td>
+                                    <td>₹5,500</td>
+                                    <td>16-step worship</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Entire Day Puja</strong></td>
+                                    <td>₹26,000</td>
+                                    <td>Complete day worship</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-helicopter"></i>
+                    </div>
+                    <h5>Helicopter Services</h5>
+                    <p>Book helicopter rides from Phata, Sersi, Guptkashi. Advance UTDB registration required.</p>
+                    <a href="https://heliyatra.irctc.co.in" target="_blank" class="btn btn-outline-primary btn-sm">Book IRCTC Heli</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h5>Accommodation</h5>
+                    <p>Temple guest houses, tents, and lodges available. Advance booking recommended.</p>
+                    <a href="https://badrinath-kedarnath.gov.in/online-services/accommodation/accommodation.aspx" target="_blank" class="btn btn-outline-primary btn-sm">Book Stay</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <h5>Trekking Support</h5>
+                    <p>18 km trek from Gaurikund. Pony/doli services available. Medical aid on route.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h5>24/7 Helpline</h5>
+                    <p>Pilgrim support, emergency assistance, and information services available round the clock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://images.bhaskarassets.com/web2images/521/2023/08/14/kedarnath-dham-15_1692008411.jpg" alt="Kedarnath Temple Main" class="gallery-image">
+                    <h6 class="mt-2 text-center">Kedarnath Temple</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.chardhamhotel.in/blog/wp-content/uploads/2024/09/Kedarnath-Temple.jpg" alt="Himalayan Peaks" class="gallery-image">
+                    <h6 class="mt-2 text-center">Surrounding Peaks</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.hotelbhanupalace.com/rudraprayag/wp-content/uploads/2024/06/mandakini-river.jpg" alt="Mandakini River" class="gallery-image">
+                    <h6 class="mt-2 text-center">Sacred Mandakini</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://media.easemytrip.com/media/Blog/India/638779160275160662/638779160275160662SEXh9X.png" alt="Trekking Route" class="gallery-image">
+                    <h6 class="mt-2 text-center">Pilgrimage Trek</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://kedarnathecoresort.in/wp-content/uploads/2024/02/History-of-Kedarnath-Temple.webp" alt="Temple Architecture" class="gallery-image">
+                    <h6 class="mt-2 text-center">Stone Architecture</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://timesofindia.indiatimes.com/photo/msid-79237120,imgsize-73387.cms" alt="Evening Aarti" class="gallery-image">
+                    <h6 class="mt-2 text-center">Evening Prayers</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Links & Resources -->
+    <section id="official-links" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Official Links & Resources</h2>
+
+            <div class="official-links">
+                <a href="https://badrinath-kedarnath.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h6>Official Website</h6>
+                    <p>Badrinath-Kedarnath Temple Committee</p>
+                    <small class="text-muted">badrinath-kedarnath.gov.in</small>
+                </a>
+
+                <a href="https://heliyatra.irctc.co.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-helicopter"></i>
+                    </div>
+                    <h6>Helicopter Booking</h6>
+                    <p>Official IRCTC helicopter services</p>
+                    <small class="text-muted">₹3,200-4,200 per person</small>
+                </a>
+
+                <a href="https://registrationandtouristcare.uk.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h6>UTDB Registration</h6>
+                    <p>Mandatory registration for all pilgrims</p>
+                    <small class="text-muted">Required for heli booking</small>
+                </a>
+
+                <a href="https://badrinath-kedarnath.gov.in/online-services/accommodation/accommodation.aspx" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h6>Accommodation</h6>
+                    <p>Official guest house booking</p>
+                    <small class="text-muted">BKTC facilities</small>
+                </a>
+
+                <a href="https://uttarakhandtourism.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h6>Uttarakhand Tourism</h6>
+                    <p>State tourism information and packages</p>
+                    <small class="text-muted">Official state portal</small>
+                </a>
+
+                <a href="https://rudraprayag.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h6>District Administration</h6>
+                    <p>Rudraprayag district official portal</p>
+                    <small class="text-muted">Emergency contacts</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Contact Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <strong>Temple Address:</strong><br>
+                            Shri Kedarnath Temple<br>
+                            Kedarnath, Rudraprayag District<br>
+                            Uttarakhand - 246445<br>
+                            Altitude: 3,583 meters
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-building contact-icon"></i>
+                            <strong>Head Office:</strong><br>
+                            Badrinath-Kedarnath Temple Committee<br>
+                            Saket, Lane No-7, Canal Road<br>
+                            Dehradun, Uttarakhand - 248001
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <strong>Helpline Numbers:</strong><br>
+                            +91-85340-01008 (Kedarnath Helpline)<br>
+                            0135-2741600 (General Enquiry)<br>
+                            +91-73022-57116 (Online Services)
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-helicopter contact-icon"></i>
+                            <strong>Helicopter Helpline:</strong><br>
+                            +91-98709-63731 (Kedarnath Heli)<br>
+                            01364-297878/79 (Yatra Control Room)
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Temple & Travel Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <strong>Temple Timings:</strong><br>
+                            Morning: 4:00 AM - 3:00 PM<br>
+                            Evening: 5:00 PM - 8:00 PM<br>
+                            <small>(Closed 3-5 PM for rest)</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-calendar contact-icon"></i>
+                            <strong>2025 Season:</strong><br>
+                            Opening: May 2, 2025 (7:00 AM)<br>
+                            Closing: November 2025<br>
+                            <small>(Closed in winter due to snow)</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-hiking contact-icon"></i>
+                            <strong>Trek Distance:</strong><br>
+                            18 km from Gaurikund<br>
+                            14 km from Sonprayag (helicopter)<br>
+                            <small>Pony/Doli services available</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-exclamation-triangle contact-icon"></i>
+                            <strong>Emergency Contacts:</strong><br>
+                            Disaster Control: 0135-2710232<br>
+                            Medical Emergency: 102<br>
+                            Tourist Helpline: 1364 (Toll-free)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-4 border-top border-secondary">
+                    <p class="mb-2">
+                        <i class="fas fa-quote-left text-warning me-2"></i>
+                        <span class="mountain-icon">🏔️</span> "ॐ केदारनाथाय नमः" <span class="mountain-icon">🏔️</span>
+                    </p>
+                    <small class="text-muted">
+                        <em>At 3,583 meters - Where devotion meets the divine in the pristine Himalayas</em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6><span class="mountain-icon">🏔️</span> Kedarnath Temple</h6>
+                    <p class="small mb-0">Fifth Jyotirlinga - Lord of the Himalayan Peaks at 3,583 meters</p>
+                    <p class="small mt-2">
+                        Official Website: <a href="https://badrinath-kedarnath.gov.in" target="_blank" class="text-warning">badrinath-kedarnath.gov.in</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">&copy; 2025 Kedarnath Temple Portal. Created with devotion.</p>
+                    <p class="small mt-2">
+                        Helpline: <span class="text-warning">+91-85340-01008</span> | 
+                        Heli Booking: <span class="text-warning">+91-98709-63731</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 107, 53, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 107, 53, 0.95)';
+            }
+        });
+
+        // Image gallery lightbox effect
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src.replace('w=400&h=300', 'w=800&h=600');
+                modalImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;border-radius:10px;';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-collapse a');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // collapse navbar after clicking any link
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+                });
+                bsCollapse.hide();
+            });
+            });
+        });
+    </script>
+</body>
+</html>

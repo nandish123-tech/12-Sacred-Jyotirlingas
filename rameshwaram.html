@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rameshwaram Temple - Sacred Jyotirlinga and Char Dham</title>
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd700;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --orange-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: var(--orange-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -55%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .fact-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .architecture-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 107, 53, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .temple-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .official-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .special-notice {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .sacred-info {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffffff;
+        }
+
+        .island-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .bridge-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+                margin: 1rem 0;
+            }
+
+            .key-facts-grid,
+            .architecture-features,
+            .services-grid,
+            .official-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-om me-2"></i>Rameshwaram Temple
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#significance">Significance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Rameshwaram Temple</h1>
+                <p class="hero-subtitle"><span class="island-icon">🏝️</span>Sacred Island - Jyotirlinga & Char Dham</p>
+                <p class="lead mb-4">
+                    Rameshwaram - Where Lord Rama worshipped Shiva before crossing to Lanka, featuring India's 
+                    longest temple corridor, 22 sacred tirthas, connected to mainland by the iconic Pamban Bridge.
+                </p>
+                <a href="#overview" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-info-circle me-2"></i>Explore Temple
+                </a>
+                <a href="https://rameswaramramanathar.hrce.tn.gov.in" target="_blank" class="btn btn-outline-primary bg-primary">
+                    <i class="fas fa-external-link-alt me-2"></i>Official Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Overview -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temple Overview</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        <strong>The Arulmigu Ramanathaswamy Temple</strong>, located on the sacred Rameswaram Island in Tamil Nadu, 
+                        is one of the most revered temples in Hinduism, serving as both a Jyotirlinga and Char Dham destination. 
+                        Connected to the mainland by the architectural marvel Pamban Bridge, this temple is renowned for having 
+                        India's longest temple corridor (1220 meters), 22 sacred tirthas (holy wells), and magnificent Dravidian 
+                        architecture with towering gopurams. According to the Ramayana, Lord Rama installed and worshipped the 
+                        Shiva Lingam here before his victorious return from Lanka. The temple attracts millions of pilgrims annually 
+                        who believe that a pilgrimage to Kashi is incomplete without visiting Rameshwaram, making it an essential 
+                        part of the spiritual journey for devout Hindus.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://www.jagranimages.com/images/newimg/07082023/07_08_2023-rameshwaram_temple_23494058_114125802.jpg" alt="Rameshwaram Temple" class="temple-image">
+                </div>
+            </div>
+
+            <div class="sacred-info">
+                <h5><span class="island-icon">🏝️</span>Sacred Island & Pamban Bridge</h5>
+                <p class="mb-0">Experience the divine journey to Rameshwaram Island connected by the iconic Pamban Bridge, 
+                India's first sea bridge. The temple's unique island location enhances its spiritual significance as Lord Rama's sacred destination.</p>
+            </div>
+
+            <div class="special-notice">
+                <h5><span class="bridge-icon">🎫</span>Online Quick & Special Darshan</h5>
+                <p class="mb-0">Book Quick Darshan (₹200) and Special Darshan online through official HRCE portal. 
+                Temple timings: 4:00 AM-1:00 PM, 3:00 PM-8:00 PM. Experience 22 sacred tirthas and India's longest corridor.</p>
+            </div>
+
+            <div class="key-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-title">Ancient Origins:</div>
+                    <p>Established by Lord Rama, mentioned in Ramayana, reconstructed multiple times with current structure from medieval period</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Architecture:</div>
+                    <p>Dravidian style, India's longest temple corridor (1220m), magnificent gopurams, 22 sacred tirthas</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Location:</div>
+                    <p>Rameswaram Island, Ramanathapuram District, Tamil Nadu - Connected by Pamban Bridge</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Deity:</div>
+                    <p>Ramanathaswamy (Shiva) and Parvatavardhini (Parvati) - Installed by Lord Rama</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Significance:</div>
+                    <p>Jyotirlinga, Char Dham, 275 Paadal Petra Sthalams, essential for Kashi-Rameshwaram pilgrimage</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Visitors:</div>
+                    <p>Millions of pilgrims annually, managed by Tamil Nadu HRCE Department with modern facilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Treta Yuga (Ramayana Era)</div>
+                        <p>According to Hindu mythology, Lord Rama installed the Shiva Lingam at this spot and worshipped 
+                        Lord Shiva to absolve the sin of killing Ravana (a Brahmin) before returning to Ayodhya. 
+                        Goddess Parvati also installed a lingam here, establishing the sacred site that would become 
+                        one of the most important pilgrimage destinations in Hinduism.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">6th-9th Century CE</div>
+                        <p>The temple was glorified in the Tevaram hymns by the Nayanmars (Appar, Sundarar, and Sambandar), 
+                        making it one of the 275 Paadal Petra Sthalams. These devotional hymns established the temple's 
+                        spiritual significance and attracted pilgrims from across South India.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">12th-16th Century</div>
+                        <p>The temple underwent major reconstruction and expansion under various dynasties including the 
+                        Pandyas. The magnificent corridors, gopurams, and much of the current architectural structure 
+                        were built during this period, establishing the temple's distinctive Dravidian architectural style.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1667 CE</div>
+                        <p>Pappakudi village was donated as a grant to Rameshwaram Temple by Deva Venkala Perumal 
+                        Ramanathar of Madurai Nayak king. Along with Pappakudi, Anandur and Urasur villages were also 
+                        donated, providing significant revenue for temple maintenance and operations.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1745-1837 CE</div>
+                        <p>The Maratha kings who ruled Thanjavur established chatrams (rest houses) throughout the region 
+                        between Mayiladuthurai and Rameswaram, donating them to the temple. This infrastructure development 
+                        greatly facilitated pilgrimage and increased the temple's accessibility.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Modern Era (1960-Present)</div>
+                        <p>The temple came under the administration of Tamil Nadu's Hindu Religious and Charitable 
+                        Endowments (HRCE) Department. Major renovations, the famous Pamban Bridge construction, online 
+                        booking systems, and modern amenities have transformed the pilgrimage experience while preserving 
+                        ancient traditions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://static2.tripoto.com/media/filter/tst/img/OgData/1520665647_pamban_bridge_rameshwaram_fotor.jpg" alt="Pamban Bridge" class="temple-image">
+                    <div class="text-center mt-3">
+                        <h6 class="text-primary">Pamban Bridge</h6>
+                        <p class="small">India's first sea bridge connecting sacred Rameshwaram Island to mainland</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Marvel -->
+    <section id="architecture" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Marvel</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-3">Dravidian Architecture Features</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Longest Corridor:</strong> India's longest temple corridor at 1220 meters with 1000+ pillars</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>22 Sacred Tirthas:</strong> Holy wells within temple complex for ritual bathing</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Towering Gopurams:</strong> Magnificent entrance towers with intricate sculptural work</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Dravidian Style:</strong> Classic South Indian temple architecture with detailed stone carvings</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Sacred Sanctums:</strong> Multiple shrines including main Ramanathaswamy and Parvatavardhini</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://stampedmoments.com/wp-content/uploads/2024/12/ramanathaswamy-temple-rameswaram.jpg" alt="Temple Corridor" class="temple-image">
+
+                    <div class="mt-4 p-3 bg-info bg-opacity-10 border-start border-info border-4">
+                        <h6 class="text-info mb-2">Sacred Corridor Walk</h6>
+                        <p class="mb-0">The 1220-meter corridor with over 1000 intricately carved pillars represents 
+                        a spiritual journey of devotion, each step bringing devotees closer to the divine presence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Significance -->
+    <section id="significance" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spiritual Significance</h2>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVOtZqfOsKbNGpm-uf6LqPHvVAzv8k6aBZ7ApSB_slDsr0ajpqdv_R5z5ensURKPC-2Qg&usqp=CAU" alt="Jyotirlinga" class="gallery-image">
+                        <h5 class="mt-3">Sacred Jyotirlinga</h5>
+                        <p>One of 12 sacred Jyotirlingas where Lord Rama himself installed and worshipped Shiva</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.chardhamtour.in/wp-content/uploads/2018/01/chardham-in-india.jpg" alt="Char Dham" class="gallery-image">
+                        <h5 class="mt-3">Char Dham Site</h5>
+                        <p>One of four sacred Char Dham destinations essential for complete Hindu pilgrimage</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://i.ytimg.com/vi/lA3llNXgOTY/sddefault.jpg" alt="Sacred Tirthas" class="gallery-image">
+                        <h5 class="mt-3">22 Sacred Tirthas</h5>
+                        <p>Holy wells within temple complex for ritual purification and spiritual cleansing</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <h4 class="text-primary mb-3">Ramanathaswamy - Lord of Rama</h4>
+                    <p class="lead">Rameshwaram holds the unique distinction of being established by Lord Rama himself, 
+                    making it one of the most sacred sites in Hinduism. The temple represents the perfect synthesis of 
+                    Vaishnavism and Shaivism, where Rama (Vishnu's avatar) worshipped Shiva. This sacred act established 
+                    the principle that devotion transcends sectarian boundaries in the ultimate pursuit of divine realization.</p>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Divine Blessings & Benefits</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-water text-primary me-2"></i>Purification through 22 sacred tirthas washing away sins and negative karma</li>
+                            <li><i class="fas fa-road text-success me-2"></i>Complete spiritual journey combining Kashi-Rameshwaram pilgrimage circuit</li>
+                            <li><i class="fas fa-heart text-danger me-2"></i>Divine grace through Lord Rama's blessed installation and worship</li>
+                            <li><i class="fas fa-family text-info me-2"></i>Family harmony, prosperity, and protection from obstacles</li>
+                            <li><i class="fas fa-star text-warning me-2"></i>Liberation from cycle of birth and death through sacred darshan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-primary bg-opacity-10 rounded">
+                        <h6 class="text-primary mb-3">Sacred Mantras</h6>
+                        <p class="text-center fst-italic mb-2">"ॐ रामनाथस्वामिने नमः"</p>
+                        <p class="text-center fst-italic mb-3">"ॐ नमः शिवाय"</p>
+                        <hr>
+                        <h6 class="text-primary mb-3">Essential Rituals</h6>
+                        <ul class="small">
+                            <li>22 Tirthas sacred bath</li>
+                            <li>Spatika Lingam darshan</li>
+                            <li>Abhishekam ceremony</li>
+                            <li>Corridor circumambulation</li>
+                            <li>Parvatavardhini worship</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Facilities -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Services & Facilities</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Temple Schedule</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Timings</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Temple Opens</strong></td>
+                                    <td>4:00 AM</td>
+                                    <td>Daily opening</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Spatika Lingam</strong></td>
+                                    <td>5:00 AM - 6:00 AM</td>
+                                    <td>Special morning darshan</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>6:00 AM - 1:00 PM<br>3:00 PM - 8:30 PM</td>
+                                    <td>Free darshan</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sacred Tirthas</strong></td>
+                                    <td>5:30 AM - 12:30 PM<br>3:00 PM - 7:00 PM</td>
+                                    <td>22 holy wells</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Temple Break</strong></td>
+                                    <td>1:00 PM - 3:00 PM</td>
+                                    <td>Afternoon closure</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Online Booking Services</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price</th>
+                                    <th>Benefits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>Free</td>
+                                    <td>Regular temple entry</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Quick Darshan</strong></td>
+                                    <td>₹200</td>
+                                    <td>Faster entry, skip queues</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Special Darshan</strong></td>
+                                    <td>₹300-500</td>
+                                    <td>VIP treatment, priority access</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Abhishekam</strong></td>
+                                    <td>₹1,500</td>
+                                    <td>90 minutes, couple service</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Camera Fee</strong></td>
+                                    <td>₹25</td>
+                                    <td>Still photography inside</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h5>Online Booking</h5>
+                    <p>Book Quick/Special Darshan through official HRCE portal. Easy registration and payment process.</p>
+                    <a href="https://rameswaramramanathar.hrce.tn.gov.in" target="_blank" class="btn btn-outline-primary btn-sm">Book Now</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h5>22 Sacred Tirthas</h5>
+                    <p>Experience ritual purification in all 22 holy wells within the temple complex.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h5>Accommodation</h5>
+                    <p>Temple satrums, TTDC hotels, and private lodges available near temple and across island.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <h5>Connectivity</h5>
+                    <p>Rameshwaram Railway Station on island, connected by iconic Pamban Bridge rail and road links.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center" alt="Rameshwaram Temple Main" class="gallery-image">
+                    <h6 class="mt-2 text-center">Main Temple Complex</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/pamban-bridge-rameswaram-tamil-nadu-attr-about-1?qlt=82&ts=1727161974290" alt="Pamban Bridge" class="gallery-image">
+                    <h6 class="mt-2 text-center">Iconic Pamban Bridge</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://blog.yatradham.org/wp-content/uploads/2023/11/Rameshwaram-Temple-Dress-Code.jpg" alt="Longest Corridor" class="gallery-image">
+                    <h6 class="mt-2 text-center">India's Longest Corridor</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://kirtankar.com/wp-content/uploads/2025/04/rameshwaram-jyotirlinga.jpg" alt="Sacred Sanctum" class="gallery-image">
+                    <h6 class="mt-2 text-center">Sacred Sanctum</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.mistay.in/travel-blog/content/images/2023/01/Screenshot-2023-01-18-234320.jpg" alt="22 Tirthas" class="gallery-image">
+                    <h6 class="mt-2 text-center">22 Sacred Tirthas</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://cdn.triptotemples.com/packages/65be0bb99cc6d325323d004e-rameshwaram-800.1200-copy.webp?tr=w-800,h-1200,f-webp" alt="Temple Gopuram" class="gallery-image">
+                    <h6 class="mt-2 text-center">Magnificent Gopuram</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Links & Resources -->
+    <section id="official-links" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Official Links & Resources</h2>
+
+            <div class="official-links">
+                <a href="https://rameswaramramanathar.hrce.tn.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h6>Official HRCE Website</h6>
+                    <p>Tamil Nadu HRCE temple portal</p>
+                    <small class="text-muted">Online booking & services</small>
+                </a>
+
+                <a href="https://www.tamilnadutourism.tn.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h6>Tamil Nadu Tourism</h6>
+                    <p>Official state tourism portal</p>
+                    <small class="text-muted">Travel packages & guides</small>
+                </a>
+
+                <a href="https://ramanathapuram.nic.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h6>District Administration</h6>
+                    <p>Ramanathapuram district official portal</p>
+                    <small class="text-muted">Government services</small>
+                </a>
+
+                <a href="https://rameswaramtourism.com" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h6>Tourism Information</h6>
+                    <p>Complete Rameshwaram travel guide</p>
+                    <small class="text-muted">Hotels & transportation</small>
+                </a>
+
+                <a href="https://templetimings.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h6>Temple Timings</h6>
+                    <p>Detailed schedules and booking guides</p>
+                    <small class="text-muted">Updated information</small>
+                </a>
+
+                <a href="https://www.india.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h6>Government Portal</h6>
+                    <p>Official India government information</p>
+                    <small class="text-muted">Municipality services</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Contact Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <strong>Temple Address:</strong><br>
+                            Arulmigu Ramanathaswamy Temple<br>
+                            East Car Street<br>
+                            Rameswaram - 623526<br>
+                            Ramanathapuram District, Tamil Nadu
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <strong>Contact Numbers:</strong><br>
+                            04573-221223 (Temple Main Office)<br>
+                            +91-72996-68315 (Tourism Support)<br>
+                            +91-80560-19035 (Booking Assistance)
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <strong>Email Contacts:</strong><br>
+                            jceorameshwaram_35671.hrce@tn.gov.in<br>
+                            contact@rameswaramtourism.com<br>
+                            support@rameswaramtourism.com
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-globe contact-icon"></i>
+                            <strong>Official Website:</strong><br>
+                            <a href="https://rameswaramramanathar.hrce.tn.gov.in" target="_blank" class="text-warning">rameswaramramanathar.hrce.tn.gov.in</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Temple & Travel Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <strong>Temple Timings:</strong><br>
+                            Morning: 4:00 AM - 1:00 PM<br>
+                            Evening: 3:00 PM - 8:00 PM<br>
+                            <small>Spatika Lingam: 5:00 AM - 6:00 AM</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-train contact-icon"></i>
+                            <strong>Railway Connectivity:</strong><br>
+                            Rameshwaram Railway Station (on island)<br>
+                            Connected via Pamban Bridge<br>
+                            Regular trains from major cities
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-plane contact-icon"></i>
+                            <strong>Nearest Airports:</strong><br>
+                            Madurai Airport: 174 km<br>
+                            Trichy Airport: 320 km<br>
+                            Chennai Airport: 570 km
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-water contact-icon"></i>
+                            <strong>Sacred Rituals:</strong><br>
+                            22 Tirthas: 5:30 AM-12:30 PM, 3:00-7:00 PM<br>
+                            Abhishekam: ₹1,500 per couple (90 mins)<br>
+                            Photography: ₹25 for still camera
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-4 border-top border-secondary">
+                    <p class="mb-2">
+                        <i class="fas fa-quote-left text-warning me-2"></i>
+                        <span class="island-icon">🏝️</span> "ॐ रामनाथस्वामिने नमः" <span class="island-icon">🏝️</span>
+                    </p>
+                    <small class="text-muted">
+                        <em>Sacred island where Lord Rama worshipped Shiva - Jyotirlinga & Char Dham in one</em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6><span class="island-icon">🏝️</span> Rameshwaram Temple</h6>
+                    <p class="small mb-0">Sacred island Jyotirlinga & Char Dham - Lord Rama's divine installation</p>
+                    <p class="small mt-2">
+                        Official Website: <a href="https://rameswaramramanathar.hrce.tn.gov.in" target="_blank" class="text-warning">rameswaramramanathar.hrce.tn.gov.in</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">&copy; 2025 Rameshwaram Temple Portal. Created with devotion.</p>
+                    <p class="small mt-2">
+                        Contact: <span class="text-warning">04573-221223</span> | 
+                        <span class="text-warning">jceorameshwaram_35671.hrce@tn.gov.in</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 107, 53, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 107, 53, 0.95)';
+            }
+        });
+
+        // Image gallery lightbox effect
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src.replace('w=400&h=300', 'w=800&h=600');
+                modalImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;border-radius:10px;';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-collapse a');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // collapse navbar after clicking any link
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+                });
+                bsCollapse.hide();
+            });
+            });
+        });
+    </script>
+</body>
+</html>

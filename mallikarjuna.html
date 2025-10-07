@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mallikarjuna Temple - Second Jyotirlinga & Shakti Peetha</title>
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd700;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --orange-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: var(--orange-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -55%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .fact-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .architecture-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 107, 53, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .temple-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .temple-image1 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .official-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+                margin: 1rem 0;
+            }
+
+            .key-facts-grid,
+            .architecture-features,
+            .services-grid,
+            .official-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-om me-2"></i>Mallikarjuna Temple
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#significance">Significance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Mallikarjuna Temple</h1>
+                <p class="hero-subtitle">द्वितीय ज्योतिर्लिङ्ग एवं षष्ठ शक्तिपीठ</p>
+                <p class="hero-tagline mb-3">Second Jyotirlinga & Sixth Shakti Peetha</p>
+                <p class="lead mb-4">
+                    Srisailam Mallikarjuna - "The Kailash of South" - sacred abode where Lord Shiva and Goddess Parvati 
+                    reside together, making it both a revered Jyotirlinga and powerful Shakti Peetha.
+                </p>
+                <a href="#overview" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-info-circle me-2"></i>Explore Temple
+                </a>
+                <a href="https://www.srisailadevasthanam.org" target="_blank" class="btn btn-outline-primary btn-lg bg-primary">
+                    <i class="fas fa-external-link-alt me-2"></i>Official Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Overview -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temple Overview</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        <strong>Sri Bhramaramba Mallikarjuna Swamy Temple</strong> at Srisailam is one of India's most 
+                        sacred pilgrimage sites, uniquely combining both Jyotirlinga and Shakti Peetha significance. 
+                        Located atop the Nallamala Hills overlooking the Krishna River, this ancient shrine attracts 
+                        millions of devotees seeking the divine blessings of Lord Mallikarjuna and Goddess Bhramaramba.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://www.pilgrimagetour.in/blog/wp-content/uploads/2023/11/Best-Time-To-Visit-Mallikarjun-Temple.jpg" alt="Mallikarjuna Temple Srisailam" class="temple-image">
+                </div>
+            </div>
+
+            <div class="key-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-title">Built:</div>
+                    <p>Ancient temple with major reconstructions in 7th century, 15th century Vijayanagara period, and recent renovations</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Architecture:</div>
+                    <p>Magnificent Dravidian style with four golden gopurams, mandapams, and intricate stone carvings</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Location:</div>
+                    <p>Srisailam, Kurnool District, Andhra Pradesh - atop Nallamala Hills by Krishna River</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Deities:</div>
+                    <p>Lord Mallikarjuna (2nd Jyotirlinga) & Goddess Bhramaramba (6th Shakti Peetha)</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Significance:</div>
+                    <p>Unique temple combining both Jyotirlinga and Shakti Peetha - "Kailash of South"</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Visitors:</div>
+                    <p>Over 4 million pilgrims annually, especially during Shivaratri and Navaratri festivals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient Era</div>
+                        <p>According to Skanda Purana, when Kartikeya was upset about Ganesha's marriage, Lord Shiva and 
+                        Parvati came to console him at this place, which became sacred as Srisailam - the abode of Shri (prosperity).</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">7th Century CE</div>
+                        <p>Main shrine and Jyotirlinga established. The self-manifested lingam worshipped with jasmine 
+                        flowers (Mallika in Telugu) gave the deity the name Mallikarjuna.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">12th-14th Century</div>
+                        <p>Temple patronized by Kakatiya dynasty and later by Vijayanagara Empire. Significant expansions 
+                        and architectural developments during this period.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">15th-16th Century</div>
+                        <p>Major reconstruction under Sri Krishnadevaraya of Vijayanagara Empire. Eastern Rajagopuram 
+                        and many mandapams built during this golden period.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">17th Century</div>
+                        <p>Chatrapati Shivaji constructed one of the gopurams. The temple received patronage from 
+                        various rulers including the Marathas and later the Nizams of Hyderabad.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Modern Era</div>
+                        <p>Under Andhra Pradesh government, extensive renovations and facilities development. 
+                        Srisaila Devasthanam established for better temple administration and pilgrim services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://media.easemytrip.com/media/Blog/India/638808414983691967/638808414983691967GZqQzm.png" alt="Srisailam Hills Krishna River" class="temple-image">
+                    <div class="text-center mt-3">
+                        <h6 class="text-primary">Kailash of the South</h6>
+                        <p class="small">Sacred hills where Shiva-Parvati reside together</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Marvel -->
+    <section id="architecture" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Marvel</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-3">Dravidian Style Features</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Four Gopurams:</strong> Magnificent gateway towers with intricate carvings</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Golden Gopuram:</strong> One tower completely covered in gold plating</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Mukha Mandapa:</strong> Grand hall from Vijayanagara period with 42 pillars</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Garbhagriha:</strong> 60 sq feet sanctum with self-manifested Jyotirlinga</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Nandi Mandapa:</strong> Central hall with magnificent Nandi statue</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Mirror Hall:</strong> Beautiful hall with Nataraja images</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://www.pilgrimagetour.in/blog/wp-content/uploads/2023/11/Mallikarjuna-Temple-History.jpg" alt="Temple Architecture Gopurams" class="temple-image1">
+                </div>
+            </div>
+
+            <div class="architecture-features">
+                <div class="feature-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Srisailam.jpg" alt="Golden Gopuram" class="gallery-image">
+                    <h5 class="mt-3">Golden Gopuram</h5>
+                    <p>Magnificent gateway tower completely covered in gold, showcasing royal patronage and devotion</p>
+                </div>
+
+                <div class="feature-card">
+                    <img src="https://www.poojn.in/wp-content/uploads/2025/06/Srisailam-Online-Booking-Made-Easy-Your-2025-Guide-to-Simple-Darshan-Bookings.jpeg.jpg" alt="Temple Complex" class="gallery-image">
+                    <h5 class="mt-3">Temple Complex</h5>
+                    <p>Vast complex with separate shrines for Mallikarjuna and Bhramaramba, connected by mandapams</p>
+                </div>
+
+                <div class="feature-card">
+                    <img src="https://www.srisailadevasthanam.org/static/media/SD-gallery-02.1bf90b63.png" alt="Nandi Mandapa" class="gallery-image">
+                    <h5 class="mt-3">Nandi Mandapa</h5>
+                    <p>Central hall with imposing Nandi statue facing the main shrine, supported by ornate pillars</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Significance -->
+    <section id="significance" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spiritual Significance</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <h4 class="text-primary mb-3">Divine Legend & Importance</h4>
+                    <p class="lead">According to the sacred Skanda Purana, when Lord Shiva and Goddess Parvati decided 
+                    to find suitable brides for their sons, Ganesha was married to Riddhi and Siddhi. Upon returning, 
+                    Kartikeya was upset and went to Mount Krauncha. When Shiva and Parvati came to console him, 
+                    the divine place where they stayed became known as Srisailam - the abode of prosperity.</p>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Unique Dual Significance</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-star text-warning me-2"></i><strong>2nd Jyotirlinga:</strong> Sacred pillar of divine light representing Lord Shiva</li>
+                            <li><i class="fas fa-crown text-danger me-2"></i><strong>6th Shakti Peetha:</strong> Where Goddess Sati's upper lip fell, manifesting as Bhramaramba</li>
+                            <li><i class="fas fa-heart text-success me-2"></i><strong>Divine Union:</strong> Only place where Shiva and Shakti reside together in temple complex</li>
+                            <li><i class="fas fa-mountain text-info me-2"></i><strong>Kailash of South:</strong> Considered equivalent to Mount Kailash for southern devotees</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-primary bg-opacity-10 rounded">
+                        <h6 class="text-primary mb-3">Sacred Mantras</h6>
+                        <p class="text-center fst-italic mb-2">"ॐ श्री मल्लिकार्जुनाय नमः"</p>
+                        <p class="text-center fst-italic mb-3">"ॐ श्री भ्रमराम्बिकायै नमः"</p>
+                        <hr>
+                        <h6 class="text-primary mb-3">Best Pilgrimage Time</h6>
+                        <ul class="small">
+                            <li>Maha Shivaratri (Feb/Mar)</li>
+                            <li>Navaratri (Sep/Oct)</li>
+                            <li>Karthika Masam (Nov/Dec)</li>
+                            <li>Winter season (Oct-Feb)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://magikindia.com/wp-content/uploads/2017/05/sri-sailam-jyotir-lingam.jpg" alt="Jyotirlinga Divine Light" class="gallery-image">
+                        <h5 class="mt-3">Second Jyotirlinga</h5>
+                        <p>Self-manifested lingam worshipped with jasmine flowers, representing infinite divine light and energy</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdJ3tAYP2d6Iz0Tt-sAqlYOY5Zvh20MK7F3g&s" alt="Shakti Peetha Power" class="gallery-image">
+                        <h5 class="mt-3">Sixth Shakti Peetha</h5>
+                        <p>Where Goddess Sati's upper lip fell, manifesting as Bhramaramba - the divine feminine power</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://housing.com/news/wp-content/uploads/2024/01/Mallikarjuna-Jyotirlinga-f-compressed.jpg" alt="Divine Union" class="gallery-image">
+                        <h5 class="mt-3">Divine Union</h5>
+                        <p>Sacred abode where Shiva and Parvati reside together, blessing devotees with complete spiritual fulfillment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Facilities -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Services & Facilities</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Darshan Services</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Timings</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Regular Darshan</strong></td>
+                                    <td>4:30 AM - 3:00 PM<br>6:00 PM - 9:00 PM</td>
+                                    <td>Free entry</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sarva Darshan</strong></td>
+                                    <td>6:00 AM - 3:30 PM<br>6:00 PM - 10:00 PM</td>
+                                    <td>General queue system</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Special Entry</strong></td>
+                                    <td>All day</td>
+                                    <td>₹300 per person</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bhramaramba Darshan</strong></td>
+                                    <td>Same as Mallikarjuna</td>
+                                    <td>Separate shrine</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Special Sevas & Poojas</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Seva/Pooja</th>
+                                    <th>Price Range</th>
+                                    <th>Benefits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Abhishekam</strong></td>
+                                    <td>₹116 - ₹2,116</td>
+                                    <td>Divine blessings</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sahasra Bilva Archana</strong></td>
+                                    <td>₹516</td>
+                                    <td>Health & prosperity</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rudrabhishekam</strong></td>
+                                    <td>₹1,016</td>
+                                    <td>Removes obstacles</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Kalyanam</strong></td>
+                                    <td>₹2,116</td>
+                                    <td>Marriage blessings</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sahasranamarchana</strong></td>
+                                    <td>₹516</td>
+                                    <td>Spiritual upliftment</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h5>Accommodation</h5>
+                    <p>Devasthanam guesthouses, cottages, and dormitories. Online booking available.</p>
+                    <a href="https://www.srisailadevasthanam.org/en-in/online-booking/" target="_blank" class="btn btn-outline-primary btn-sm">Book Online</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h5>Annadanam</h5>
+                    <p>Free meals and prasadam. Multiple annadana halls serving thousands daily.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h5>Transportation</h5>
+                    <p>Temple bus services, taxi facilities, and ample parking arrangements.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h5>Mobile Deposit</h5>
+                    <p>Safe mobile phone deposit counters near temple entrance.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h5>Pathala Ganga</h5>
+                    <p>Sacred river bathing ghats accessible by steps from temple complex.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h5>Information Center</h5>
+                    <p>24/7 help desk for pilgrims with multilingual assistance available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.poojn.in/wp-content/uploads/2025/06/Srisailam-Online-Booking-Made-Easy-Your-2025-Guide-to-Simple-Darshan-Bookings.jpeg.jpg" alt="Mallikarjuna Temple Main View" class="gallery-image">
+                    <h6 class="mt-2 text-center">Temple Main Complex</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.srisailadevasthanam.org/static/media/SD-gallery-01.99bade47.png" alt="Golden Gopuram" class="gallery-image">
+                    <h6 class="mt-2 text-center">Golden Gopuram</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://kirtankar.com/wp-content/uploads/2025/04/Mallikarjun-Jyotriling-Temple.jpg" alt="Temple Architecture" class="gallery-image">
+                    <h6 class="mt-2 text-center">Dravidian Architecture</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.yovizag.com/wp-content/uploads/2025/08/Copy-of-Copy-of-FB-For-Yo-Vizag-2025-08-06T181434.410.jpg" alt="Nallamala Hills" class="gallery-image">
+                    <h6 class="mt-2 text-center">Nallamala Hills View</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://kirtankar.com/wp-content/uploads/2025/04/Mallikarjun-Jyotriling-Temple.jpg" alt="Temple Mandapam" class="gallery-image">
+                    <h6 class="mt-2 text-center">Temple Mandapams</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.ahospitalityclub.com/wp-content/uploads/2022/09/lingam.jpg" alt="Evening Aarti" class="gallery-image">
+                    <h6 class="mt-2 text-center">Evening Aarti</h6>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="https://www.srisailadevasthanam.org" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-images me-2"></i>View Complete Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Links & Resources -->
+    <section id="official-links" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Official Links & Resources</h2>
+
+            <div class="official-links">
+                <a href="https://www.srisailadevasthanam.org" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h6>Official Website</h6>
+                    <p>Complete temple information and services</p>
+                    <small class="text-muted">srisailadevasthanam.org</small>
+                </a>
+
+                <a href="https://www.srisailadevasthanam.org/en-in/online-booking/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h6>Online Booking</h6>
+                    <p>Darshan & accommodation booking</p>
+                    <small class="text-muted">Official booking portal</small>
+                </a>
+
+                <a href="https://www.srisailadevasthanam.org/en-in/sevas-and-darshanam/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h6>Sevas & Darshanam</h6>
+                    <p>Special poojas and seva details</p>
+                    <small class="text-muted">Complete seva information</small>
+                </a>
+
+                <a href="https://www.aptemples.ap.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h6>AP Temples Portal</h6>
+                    <p>Andhra Pradesh temples official site</p>
+                    <small class="text-muted">Government portal</small>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=org.srisailadevasthanam" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h6>Mobile App</h6>
+                    <p>Srisaila Devasthanam official app</p>
+                    <small class="text-muted">Download from Play Store</small>
+                </a>
+
+                <a href="https://www.instagram.com/mallikarjuna_jyotirlingam/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h6>Instagram</h6>
+                    <p>Temple photos and updates</p>
+                    <small class="text-muted">@mallikarjuna_jyotirlingam</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Contact Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <strong>Address:</strong><br>
+                            Sri Bhramaramba Mallikarjuna Devasthanam<br>
+                            Srisailam - 518101<br>
+                            Kurnool District<br>
+                            Andhra Pradesh, India
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <strong>Phone:</strong><br>
+                            Reception: +91-8524-288888/289<br>
+                            Information: +91-8524-288885<br>
+                            Booking: +91-98490-05495
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <strong>Email:</strong><br>
+                            eo@srisailamtemple.com
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-globe contact-icon"></i>
+                            <strong>Website:</strong><br>
+                            <a href="https://www.srisailadevasthanam.org" target="_blank" class="text-warning">https://www.srisailadevasthanam.org</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Temple Timings</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <strong>Daily Darshan:</strong><br>
+                            4:30 AM - 3:00 PM<br>
+                            6:00 PM - 9:00 PM
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-sun contact-icon"></i>
+                            <strong>Abhishekam:</strong><br>
+                            6:00 AM - 11:00 AM<br>
+                            7:00 PM - 8:00 PM
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-star contact-icon"></i>
+                            <strong>Special Entry:</strong><br>
+                            ₹300 per person<br>
+                            Faster darshan facility
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-female contact-icon"></i>
+                            <strong>Bhramaramba Darshan:</strong><br>
+                            Same timings as main temple<br>
+                            Separate shrine complex
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-info-circle contact-icon"></i>
+                            <strong>Information Center:</strong><br>
+                            24/7 Help Desk Available<br>
+                            Multiple language support
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-4 border-top border-secondary">
+                    <p class="mb-2">
+                        <i class="fas fa-quote-left text-warning me-2"></i>
+                        "श्रीशैलं द्वितीयं स्यात् मल्लिकार्जुनं शिवम्"
+                    </p>
+                    <small class="text-muted">
+                        <em>Srisailam is the second Jyotirlinga - the auspicious Mallikarjuna form of Shiva</em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6><i class="fas fa-om me-2 text-warning"></i>Mallikarjuna Temple</h6>
+                    <p class="small mb-0">Second Jyotirlinga & Sixth Shakti Peetha - Kailash of South</p>
+                    <p class="small mt-2">
+                        Official Website: <a href="https://www.srisailadevasthanam.org" target="_blank" class="text-warning">srisailadevasthanam.org</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">&copy; 2025 Mallikarjuna Temple Portal. Created with devotion.</p>
+                    <p class="small mt-2">
+                        Contact: <span class="text-warning">+91-8524-288888</span> | 
+                        <span class="text-warning">eo@srisailamtemple.com</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 107, 53, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 107, 53, 0.95)';
+            }
+        });
+
+        // Image gallery lightbox effect
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src.replace('w=400&h=300', 'w=800&h=600');
+                modalImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;border-radius:10px;';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-collapse a');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // collapse navbar after clicking any link
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+                });
+                bsCollapse.hide();
+            });
+            });
+        });
+    </script>
+</body>
+</html>

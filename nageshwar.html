@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nageshwar Temple - First Jyotirlinga of Lord Shiva</title>
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd700;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --orange-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: var(--orange-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -55%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .fact-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .architecture-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 107, 53, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .temple-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .official-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .special-notice {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .coastal-info {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffffff;
+        }
+
+        .serpent-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .coast-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+                margin: 1rem 0;
+            }
+
+            .key-facts-grid,
+            .architecture-features,
+            .services-grid,
+            .official-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-om me-2"></i>Nageshwar Temple
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#significance">Significance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Nageshwar Temple</h1>
+                <p class="hero-subtitle"><span class="serpent-icon">🐍</span>Lord of Serpents - First Sacred Jyotirlinga</p>
+                <p class="lead mb-4">
+                    Nageshwar - On the sacred coast of Saurashtra near Dwarka, where Lord Shiva manifests as the 
+                    protector from all poisons and fears, featuring a magnificent 25-meter tall Shiva statue and serene gardens.
+                </p>
+                <a href="#overview" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-info-circle me-2"></i>Explore Temple
+                </a>
+                <a href="https://devbhumidwarka.nic.in" target="_blank" class="btn btn-outline-primary bg-primary btn-lg">
+                    <i class="fas fa-external-link-alt me-2"></i>Official Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Overview -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temple Overview</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        <strong>The Nageshwar Temple</strong>, located on the scenic coastal route between Dwarka city and Beyt Dwarka 
+                        Island in Gujarat, is the first among the 12 sacred Jyotirlingas. Situated in the ancient Darukavana forest 
+                        region of Saurashtra, this revered temple houses one of the world's 12 swayambhu (self-existent) Jyotirlingas 
+                        in an underground sanctum. The temple complex features a magnificent 25-meter tall statue of Lord Shiva in 
+                        meditation posture, beautiful gardens with a sacred pond, and the nearby Gopi Talav Tirth connected to 
+                        Lord Krishna's legends. Archaeological excavations suggest five earlier cities existed at this site, 
+                        highlighting its ancient spiritual significance.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/nageshwar-Jyotirlinga-temple-02-attr-hero?qlt=82&ts=1726734769619" alt="Nageshwar Temple" class="temple-image">
+                </div>
+            </div>
+
+            <div class="coastal-info">
+                <h5><span class="coast-icon">🌊</span>Saurashtra Coast & Darukavana</h5>
+                <p class="mb-0">Experience the sacred convergence of ancient Darukavana forest and Arabian Sea coast. 
+                The temple's unique location between Dwarka and Beyt Dwarka creates a spiritually charged atmosphere with ocean breeze and divine energy.</p>
+            </div>
+
+            <div class="special-notice">
+                <h5><span class="serpent-icon">🎯</span>Direct Abhishek & Touch Lingam</h5>
+                <p class="mb-0">Special Abhishek service (₹300) allows devotees to personally touch and perform pooja to the sacred Jyotirlinga. 
+                Temple timings: 6:00 AM - 9:00 PM daily. No online booking - purchase tickets on arrival at temple counter.</p>
+            </div>
+
+            <div class="key-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-title">Ancient Origins:</div>
+                    <p>Archaeological evidence of 5 earlier cities, mentioned in Vamana Purana as sacred Darukavana forest</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Architecture:</div>
+                    <p>Underground sanctum with swayambhu lingam, 25m tall Shiva statue, red temple building with garden complex</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Location:</div>
+                    <p>18 km from Dwarka city on Dwarka-Beyt Dwarka coastal route, Saurashtra region, Gujarat</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Deity:</div>
+                    <p>Nageshwar Jyotirlinga - Lord Shiva as "Lord of Serpents" protector from poison and fear</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Significance:</div>
+                    <p>First Jyotirlinga, Daruka demon legend site, protection from evil, archaeological heritage site</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Visitors:</div>
+                    <p>Hundreds of thousands annually, peak during Mahashivaratri and winter months (Nov-Feb)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient Puranic Era</div>
+                        <p>According to Vamana Purana (Chapters 6 & 45), the sacred Darukavana forest was home to Balakhilyas, 
+                        a group of dwarf sages who worshipped Lord Shiva. When Shiva appeared as a nude ascetic wearing only 
+                        serpents to test their devotion, the sages cursed him, causing his linga to fall to earth, making 
+                        the entire world tremble until Lord Brahma and Vishnu intervened.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Demon Daruka Legend</div>
+                        <p>The demon Daruka imprisoned the devotee Supriya in the forest. Supriya's continuous chanting of 
+                        "Om Namaha Shivaya" invoked Lord Shiva, who arrived to vanquish the demon. A self-manifested 
+                        Shivalinga appeared at this spot, establishing the sacred Jyotirlinga that devotees worship to this day.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Archaeological Discoveries</div>
+                        <p>Excavations have revealed evidence of five earlier cities at this site, suggesting continuous 
+                        habitation and worship for millennia. These findings support the temple's claim to being one of 
+                        the most ancient spiritual sites in India, with layers of civilization built upon each other.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Medieval Period</div>
+                        <p>The temple maintained its significance through various dynasties ruling Gujarat. Despite 
+                        periodic invasions and political changes, the continuous devotion of pilgrims and local 
+                        patronage ensured the temple's preservation and ongoing worship traditions.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Modern Development (20th-21st Century)</div>
+                        <p>Construction of the magnificent 25-meter tall Shiva statue in meditation posture became a 
+                        landmark visible from great distances. Development of gardens, sacred pond, parking facilities, 
+                        and improved road connectivity from Dwarka enhanced the pilgrimage experience significantly.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">Present Era (2020-2025)</div>
+                        <p>Enhanced facilities including better road access, organized parking, prasadam counters, and 
+                        improved security. The temple has become easily accessible from Dwarka with regular bus services, 
+                        while maintaining its serene spiritual atmosphere amidst the coastal Saurashtra landscape.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://dwarkasomnathpackages.com/wp-content/uploads/2021/09/nageshwar-jyotirlinga-temple.jpg" alt="25m Shiva Statue" class="temple-image">
+                    <div class="text-center mt-3">
+                        <h6 class="text-primary">25m Shiva Statue</h6>
+                        <p class="small">Magnificent Lord Shiva in meditation, visible landmark on Saurashtra coast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Marvel -->
+    <section id="architecture" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Marvel</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-3">Coastal Temple Complex</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Underground Sanctum:</strong> Sacred Jyotirlinga housed in subterranean chamber</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>25m Shiva Statue:</strong> Massive meditation posture statue, visible landmark</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Red Building:</strong> Distinctive red temple structure with coastal architecture</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Garden Complex:</strong> Beautiful landscaped gardens with sacred pond</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Coastal Setting:</strong> Between Dwarka city and Beyt Dwarka island route</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://thetempleguru.com/wp-content/uploads/2023/03/nageshwar-jyotirling-3.jpg" alt="Temple Architecture" class="temple-image" style="height: 300px;">
+
+                    <div class="mt-4 p-3 bg-info bg-opacity-10 border-start border-info border-4">
+                        <h6 class="text-info mb-2">Gopi Talav Tirth</h6>
+                        <p class="mb-0">Near the temple is the sacred Gopi Talav Tirth lake, connected to legends of 
+                        gopis visiting Lord Krishna, where they ultimately offered their lives to merge with the divine soil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Significance -->
+    <section id="significance" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spiritual Significance</h2>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.ahospitalityclub.com/wp-content/uploads/2022/04/nageshwar-2_1597198977.jpg" alt="First Jyotirlinga" class="gallery-image">
+                        <h5 class="mt-3">First Jyotirlinga</h5>
+                        <p>The premier among 12 sacred Jyotirlingas where Lord Shiva protects devotees from all fears</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.gujarattourism.com/content/dam/gujrattourism/images/religious-sites/nageshwar-jyotirlinga/Nageshwar-Jyotirlinga-Banner.jpg" alt="Darukavana Forest" class="gallery-image">
+                        <h5 class="mt-3">Sacred Darukavana</h5>
+                        <p>Ancient epic forest where sages performed penance and Lord Shiva tested their devotion</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://pbs.twimg.com/media/FjGnBS3XkAEDlNW.jpg" alt="Serpent Protection" class="gallery-image">
+                        <h5 class="mt-3">Serpent Lord</h5>
+                        <p>Nageshwar - Lord of serpents providing protection from poisons, fears, and negative energies</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <h4 class="text-primary mb-3">Nageshwar - Protector from All Poisons</h4>
+                    <p class="lead">Nageshwar represents Lord Shiva's protective aspect as the "Lord of Serpents" who neutralizes 
+                    all forms of poison - physical, mental, emotional, and spiritual. The temple's location in the ancient 
+                    Darukavana forest, where divine intervention occurred to protect devotees, makes it a powerful center 
+                    for seeking protection from fears, negativity, and life's challenges.</p>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Divine Protection Benefits</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-shield-alt text-success me-2"></i>Protection from all types of poisons and toxic influences</li>
+                            <li><i class="fas fa-heart text-danger me-2"></i>Removal of fear, anxiety, and negative mental states</li>
+                            <li><i class="fas fa-star text-warning me-2"></i>Courage and strength to face life's challenges</li>
+                            <li><i class="fas fa-peace text-info me-2"></i>Mental peace and spiritual clarity through divine grace</li>
+                            <li><i class="fas fa-family text-primary me-2"></i>Family protection and harmony in relationships</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-primary bg-opacity-10 rounded">
+                        <h6 class="text-primary mb-3">Sacred Mantras</h6>
+                        <p class="text-center fst-italic mb-2">"ॐ नागेश्वराय नमः"</p>
+                        <p class="text-center fst-italic mb-3">"ॐ नमः शिवाय"</p>
+                        <hr>
+                        <h6 class="text-primary mb-3">Best Visit Times</h6>
+                        <ul class="small">
+                            <li>Mahashivaratri (Feb/Mar)</li>
+                            <li>Winter months (Nov-Feb)</li>
+                            <li>Kartik Purnima (Nov)</li>
+                            <li>Monday fasting days</li>
+                            <li>Early morning darshan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Facilities -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Services & Facilities</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Temple Schedule</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Timings</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Temple Opens</strong></td>
+                                    <td>5:30 AM</td>
+                                    <td>Daily opening</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mangal Aarti</strong></td>
+                                    <td>5:00 - 5:30 AM</td>
+                                    <td>Morning prayers</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>6:00 AM - 12:30 PM<br>5:00 PM - 9:30 PM</td>
+                                    <td>Free darshan</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maha Bhog Aarti</strong></td>
+                                    <td>12:00 - 12:30 PM</td>
+                                    <td>Midday ceremony</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Madhya Snana</strong></td>
+                                    <td>4:00 - 4:30 PM</td>
+                                    <td>Afternoon ritual bath</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shayan Aarti</strong></td>
+                                    <td>8:30 - 9:00 PM</td>
+                                    <td>Evening prayers</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Special Services</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>Free</td>
+                                    <td>Regular queue entry</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Abhishek Pooja</strong></td>
+                                    <td>₹300</td>
+                                    <td>Touch lingam, personal pooja</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Puja Samagri</strong></td>
+                                    <td>₹200</td>
+                                    <td>Materials near Garbha Griha</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rudrabhishek</strong></td>
+                                    <td>Available</td>
+                                    <td>With Panchamrit offering</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Laghurudra Pooja</strong></td>
+                                    <td>Available</td>
+                                    <td>Health & wealth ritual</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h5>Direct Abhishek</h5>
+                    <p>Unique opportunity to personally touch the Jyotirlinga and perform abhishek. Men remove shirt during pooja.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h5>Easy Connectivity</h5>
+                    <p>Regular bus services from Dwarka (18 km). High frequency transport, 30-minute journey from city.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h5>Facilities</h5>
+                    <p>Ample parking, prasadam counters, clean restrooms, garden seating areas, and security.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h5>Contact Support</h5>
+                    <p>Temple contact for puja bookings and information. Local pandit services available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/nageshwar-jyotirlinga-temple-dwarka-gujarat-5-attr-hero?qlt=82&ts=1726734576749" alt="Nageshwar Temple Main" class="gallery-image">
+                    <h6 class="mt-2 text-center">Main Temple Building</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://images.picxy.com/cache/2019/10/4/9b8c41f28c08e012896c4cb5686717dc.jpg" alt="25m Shiva Statue" class="gallery-image">
+                    <h6 class="mt-2 text-center">25m Lord Shiva Statue</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://behindeverytemple.org/wp-content/uploads/2020/09/5-2-1.jpg" alt="Overview Sanctum" class="gallery-image">
+                    <h6 class="mt-2 text-center">Overview Sanctum</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://dwarkatourism.com/wp-content/uploads/2025/08/nageshvara-jyotirlinga.webp" alt="Jyotirlinga" class="gallery-image">
+                    <h6 class="mt-2 text-center">Sacred Jyotirlinga</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://bharatyatri.com/wp-content/uploads/2020/04/nageshwar9.jpg" alt="Garden Complex" class="gallery-image">
+                    <h6 class="mt-2 text-center">Mukthi Temple Garden</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://topplacesindia.com/img/attractions/gujarat/nageshwar-jyotirlinga-temple/nageshwar-jyotirlinga-temple-hero.jpg" alt="Evening View" class="gallery-image">
+                    <h6 class="mt-2 text-center">Evening Temple View</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Links & Resources -->
+    <section id="official-links" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Official Links & Resources</h2>
+
+            <div class="official-links">
+                <a href="https://devbhumidwarka.nic.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h6>Devbhumi Dwarka</h6>
+                    <p>Official district administration portal</p>
+                    <small class="text-muted">devbhumidwarka.nic.in</small>
+                </a>
+
+                <a href="https://www.gujarattourism.com" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h6>Gujarat Tourism</h6>
+                    <p>Official state tourism portal</p>
+                    <small class="text-muted">Tour packages & guides</small>
+                </a>
+
+                <a href="https://yatradham.gujarat.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fa-solid fa-gopuram"></i>
+                    </div>
+                    <h6>Pavitra Yatradham</h6>
+                    <p>Gujarat pilgrimage development board</p>
+                    <small class="text-muted">Hotel & bus bookings</small>
+                </a>
+
+                <a href="https://www.incredibleindia.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h6>Incredible India</h6>
+                    <p>National tourism portal</p>
+                    <small class="text-muted">Nageshwar temple guide</small>
+                </a>
+
+                <a href="https://dwarkatourism.com" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h6>Dwarka Tourism</h6>
+                    <p>Local tourism information portal</p>
+                    <small class="text-muted">Updated temple information</small>
+                </a>
+
+                <a href="https://www.nageshwarjyotirling.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h6>Temple Schedule</h6>
+                    <p>Detailed timings and pooja information</p>
+                    <small class="text-muted">Contact: 86688 56667</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Contact Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <strong>Temple Address:</strong><br>
+                            Nageshwar Jyotirlinga Temple<br>
+                            Darukavana, Dwarka-Beyt Dwarka Route<br>
+                            District: Devbhumi Dwarka<br>
+                            Gujarat - 361345
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <strong>Temple Contact:</strong><br>
+                            +91-86688-56667 (Pandit Darshan Pathak)<br>
+                            +91-89836-57221 (Support)<br>
+                            +91-2892-234080 (Dwarka Office)
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-building contact-icon"></i>
+                            <strong>District Office:</strong><br>
+                            Devbhumi Dwarka District Collectorate<br>
+                            Dwarka, Gujarat<br>
+                            Phone: +91-2892-234090
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-info-circle contact-icon"></i>
+                            <strong>Tourism Information:</strong><br>
+                            Gujarat Tourism Helpline: 1800-203-1111<br>
+                            Email: info@gujarattourism.com
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Temple & Travel Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <strong>Temple Timings:</strong><br>
+                            Morning: 6:00 AM - 12:30 PM<br>
+                            Evening: 5:00 PM - 9:30 PM<br>
+                            <small>Abhishek timings: 6:00 AM - 12:30 PM</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-car contact-icon"></i>
+                            <strong>Distance & Transport:</strong><br>
+                            From Dwarka: 18 km (30 minutes by bus)<br>
+                            Regular bus services with high frequency<br>
+                            Private taxis and auto-rickshaws available
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-plane contact-icon"></i>
+                            <strong>Nearest Airports:</strong><br>
+                            Porbandar Airport: 107 km<br>
+                            Jamnagar Airport: 126-137 km<br>
+                            Rajkot Airport: 200 km
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-exclamation-triangle contact-icon"></i>
+                            <strong>Important Guidelines:</strong><br>
+                            Dress code: Men remove shirt for abhishek<br>
+                            No online booking - counter tickets only<br>
+                            Best time: November to February
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-4 border-top border-secondary">
+                    <p class="mb-2">
+                        <i class="fas fa-quote-left text-warning me-2"></i>
+                        <span class="serpent-icon">🐍</span> "ॐ नागेश्वराय नमः" <span class="serpent-icon">🐍</span>
+                    </p>
+                    <small class="text-muted">
+                        <em>Lord of serpents protecting devotees from all fears on the sacred Saurashtra coast</em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6><span class="serpent-icon">🐍</span> Nageshwar Temple</h6>
+                    <p class="small mb-0">First Jyotirlinga - Lord of serpents on sacred Saurashtra coast near Dwarka</p>
+                    <p class="small mt-2">
+                        Official Website: <a href="https://devbhumidwarka.nic.in" target="_blank" class="text-warning">devbhumidwarka.nic.in</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">&copy; 2025 Nageshwar Temple Portal. Created with devotion.</p>
+                    <p class="small mt-2">
+                        Contact: <span class="text-warning">+91-86688-56667</span> | 
+                        <span class="text-warning">+91-89836-57221</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 107, 53, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 107, 53, 0.95)';
+            }
+        });
+
+        // Image gallery lightbox effect
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src.replace('w=400&h=300', 'w=800&h=600');
+                modalImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;border-radius:10px;';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-collapse a');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // collapse navbar after clicking any link
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+                });
+                bsCollapse.hide();
+            });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashi Vishwanath Temple - Twelfth Jyotirlinga of Lord Shiva</title>
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd700;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --orange-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: var(--orange-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -55%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .fact-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .architecture-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 107, 53, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .temple-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .official-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .special-notice {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .golden-info {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #ff6b35;
+        }
+
+        .golden-icon {
+            font-size: 2rem;
+            color: #ff6b35;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .river-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+                margin: 1rem 0;
+            }
+
+            .key-facts-grid,
+            .architecture-features,
+            .services-grid,
+            .official-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-om me-2"></i>Kashi Vishwanath Temple
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#significance">Significance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Kashi Vishwanath Temple</h1>
+                <p class="hero-subtitle"><span class="river-icon">🏛️</span>Golden Temple - Twelfth Sacred Jyotirlinga</p>
+                <p class="lead mb-4">
+                    Kashi Vishwanath - The "Golden Temple" in ancient Varanasi, where Lord Shiva resides as Vishwanath 
+                    (Lord of the Universe) on the sacred banks of Ganga, India's most revered spiritual destination.
+                </p>
+                <a href="#overview" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-info-circle me-2"></i>Explore Temple
+                </a>
+                <a href="https://www.shrikashivishwanath.org" target="_blank" class="btn btn-outline-primary bg-primary btn-lg">
+                    <i class="fas fa-external-link-alt me-2"></i>Official Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Overview -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temple Overview</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        <strong>The Kashi Vishwanath Temple</strong>, located in the spiritual capital of Varanasi, Uttar Pradesh, 
+                        is the twelfth and most celebrated among the sacred Jyotirlingas. Known as the "Golden Temple" for its 
+                        magnificent golden spire, this ancient shrine dedicated to Lord Shiva as Vishwanath (Lord of the Universe) 
+                        attracts over 45,000 pilgrims daily. Built by Maharani Ahilyabai Holkar in 1780, the temple stands majestically 
+                        near the sacred Ganga, with the revolutionary Kashi Vishwanath Corridor (inaugurated in 2021) connecting devotees 
+                        directly from the temple to the holy river.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://www.captureatrip.com/_next/image?url=https%3A%2F%2Fd1zvcmhypeawxj.cloudfront.net%2Flocation%2FUttar%20Pradesh%2Fblogs%2Fkashi-vishwanath-temple-6635166045-lpjprn-webp-ac600eaa6f-1752061990688.webp&w=3840&q=50" alt="Kashi Vishwanath Temple" class="temple-image">
+                </div>
+            </div>
+
+            <div class="golden-info">
+                <h5><span class="golden-icon">🏛️</span>Kashi Vishwanath Corridor - 2021 Revolution</h5>
+                <p class="mb-0">Experience the world-class Kashi Vishwanath Dham Corridor connecting temple to Ganga River. 
+                Modern facilities, 40 renovated ancient temples, museum, cultural centers, and direct river access.</p>
+            </div>
+
+            <div class="special-notice">
+                <h5><span class="river-icon">🎫</span>Sugam Darshan & VIP Services</h5>
+                <p class="mb-0">Book hassle-free darshan online: Sugam Darshan (₹250), VIP Darshan (₹500-600), Special Aartis (₹300-500). 
+                24/7 online booking, queue-less entry, guided services, and exclusive prasadam included.</p>
+            </div>
+
+            <div class="key-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-title">Built:</div>
+                    <p>Present structure: 1780 CE by Maharani Ahilyabai Holkar, with 2021 corridor by PM Modi</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Architecture:</div>
+                    <p>Maratha architecture with golden spire, sanctum sanctorum gold-plated in 2022 (60 kg gold)</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Location:</div>
+                    <p>Vishwanath Gali, Varanasi, Uttar Pradesh - Connected to Dashashwamedh Ghat by corridor</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Deity:</div>
+                    <p>Vishwanath/Vishweshwar Jyotirlinga - Lord Shiva as "Lord of the Universe"</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Significance:</div>
+                    <p>Twelfth Jyotirlinga, spiritual capital of India, liberation from cycle of birth-death</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-title">Visitors:</div>
+                    <p>45,000 daily pilgrims, 10 crore visitors since 2021 corridor inauguration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient Origins (Puranic Era)</div>
+                        <p>According to ancient scriptures, Lord Shiva established himself as Vishwanath (Lord of the Universe) 
+                        in Kashi (Varanasi), making it the eternal city where devotees attain moksha. The original temple, 
+                        called Adi Vishveshwar, existed for millennia as the primary Jyotirlinga shrine.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1194 CE - First Destruction</div>
+                        <p>The original Adi Vishveshwar Temple was demolished by Mohammad of Ghor during his invasion. 
+                        Despite repeated destructions over centuries, Hindu devotees continued worship and reconstruction 
+                        efforts, demonstrating unwavering faith.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1585-1669 CE</div>
+                        <p>Man Singh I and Todar Mal rebuilt the temple under Emperor Akbar's reign. However, in 1669, 
+                        Mughal Emperor Aurangzeb ordered its demolition, and the Gyanvapi Mosque was constructed on 
+                        the site in 1678, though Hindu pilgrims continued visiting.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1780 CE - Present Temple</div>
+                        <p>Maharani Ahilyabai Holkar of Indore constructed the current magnificent temple on an adjacent site. 
+                        In 1785, Mohammad Ibrahim Khan built the Naubatkhana (drum house). In 1839, Maharaja Ranjit Singh 
+                        donated gold for covering two of the temple's domes.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1983-2021 Modern Era</div>
+                        <p>Government of Uttar Pradesh took over temple management in 1983, establishing a trust with the 
+                        former Kashi Naresh as president. The historic Kumbhabhishekham (consecration) was performed in 2018 
+                        after 239 years.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021-2025 Revolutionary Phase</div>
+                        <p>PM Modi inaugurated the Kashi Vishwanath Dham Corridor in December 2021, transforming the temple 
+                        experience. In 2022, the sanctum sanctorum was gold-plated with 60 kg gold. Over 10 crore visitors 
+                        have experienced the new world-class facilities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://www.amritara.co.in/blog/admin/assets/img/post/image_2025-03-12-07-44-13_67d13b4d87593.jpg" alt="Golden Temple" class="temple-image">
+                    <div class="text-center mt-3">
+                        <h6 class="text-primary">Golden Temple</h6>
+                        <p class="small">Magnificent golden spire donated by Maharaja Ranjit Singh, sanctum gold-plated 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Marvel -->
+    <section id="architecture" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Architectural Marvel</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-3">Maratha Architecture Features</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Golden Spires:</strong> Three domes with two covered in pure gold by Maharaja Ranjit Singh</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Gold Sanctum:</strong> Sanctum sanctorum gold-plated with 60 kg gold in 2022</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Maratha Design:</strong> 18th-century architecture by Maharani Ahilyabai Holkar</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Kashi Corridor:</strong> Modern world-class corridor connecting temple to Ganga</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Ancient Temples:</strong> 40+ renovated centuries-old temples within corridor complex</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://historified.in/wp-content/uploads/2024/11/8f374101cb4c0710960ae0085a395a83-735x560.jpg" alt="Temple Architecture" class="temple-image" style="height: 400px;">
+
+                    <div class="mt-4 p-3 bg-info bg-opacity-10 border-start border-info border-4">
+                        <h6 class="text-info mb-2">Ganga-Temple Connection</h6>
+                        <p class="mb-0">The revolutionary Kashi Vishwanath Dham Corridor creates seamless connectivity 
+                        between the temple and sacred Ganga, allowing pilgrims to complete the holy ritual circuit easily.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Significance -->
+    <section id="significance" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spiritual Significance</h2>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.bhagwanapp.in/assets/upload/Blog/kashi_vishwanath_jyotirling.jpg" alt="Twelfth Jyotirlinga" class="gallery-image">
+                        <h5 class="mt-3">Twelfth Jyotirlinga</h5>
+                        <p>The most celebrated Jyotirlinga, where Lord Shiva is worshipped as Vishwanath - Lord of Universe</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://www.kailash-yatra.org/images/kashi-ghat.jpg" alt="Moksha City" class="gallery-image">
+                        <h5 class="mt-3">Moksha City</h5>
+                        <p>Kashi (Varanasi) - the eternal city where death grants instant liberation from birth-death cycle</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feature-card text-center h-100">
+                        <img src="https://cdn.shopify.com/s/files/1/0654/9015/7804/files/Kashi_Vishwanath_Jyotirlinga.png?v=1749453716" alt="Golden Temple" class="gallery-image">
+                        <h5 class="mt-3">Golden Temple</h5>
+                        <p>Sacred golden spire and gold-plated sanctum representing divine radiance and prosperity</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <h4 class="text-primary mb-3">Vishwanath - Lord of the Universe</h4>
+                    <p class="lead">Kashi Vishwanath represents Lord Shiva's supreme form as the ruler of all cosmic creation. 
+                    According to Hindu scriptures, dying in Kashi (Varanasi) grants instant moksha (liberation) as Lord Shiva 
+                    himself whispers the Taraka Mantra in the ear of the departing soul, freeing them from rebirth cycles.</p>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Divine Blessings</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-crown text-warning me-2"></i>Supreme spiritual authority and divine wisdom</li>
+                            <li><i class="fas fa-infinity text-info me-2"></i>Liberation from cycle of birth, death, and rebirth (moksha)</li>
+                            <li><i class="fas fa-water text-primary me-2"></i>Purification through sacred Ganga darshan and holy dip</li>
+                            <li><i class="fas fa-star text-success me-2"></i>Fulfillment of all desires and material prosperity</li>
+                            <li><i class="fas fa-heart text-danger me-2"></i>Spiritual transformation and divine consciousness awakening</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-primary bg-opacity-10 rounded">
+                        <h6 class="text-primary mb-3">Sacred Mantras</h6>
+                        <p class="text-center fst-italic mb-2">"ॐ विश्वनाथाय नमः"</p>
+                        <p class="text-center fst-italic mb-3">"ॐ नमः शिवाय"</p>
+                        <hr>
+                        <h6 class="text-primary mb-3">Special Occasions</h6>
+                        <ul class="small">
+                            <li>Mahashivaratri (Feb/Mar)</li>
+                            <li>Shravan Somwar (Mondays)</li>
+                            <li>Kartik Poornima (Nov)</li>
+                            <li>Dev Deepavali (Nov)</li>
+                            <li>Daily Ganga Aarti (7:00 PM)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Facilities -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Services & Facilities</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Darshan Services</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Timings</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>General Darshan</strong></td>
+                                    <td>4:00 AM - 11:00 AM<br>12:20 PM - 7:00 PM<br>8:30 PM - 9:00 PM</td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sugam Darshan</strong></td>
+                                    <td>6:00 AM - 6:00 PM</td>
+                                    <td>₹250 per person</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>VIP Darshan</strong></td>
+                                    <td>As per booking slots</td>
+                                    <td>₹500-600 per person</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mangla Aarti</strong></td>
+                                    <td>3:00 AM - 4:00 AM</td>
+                                    <td>₹500 (Normal days)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bhog/Midday Aarti</strong></td>
+                                    <td>11:15 AM - 12:20 PM</td>
+                                    <td>₹300 per person</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 class="text-primary mb-4">Special Services</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Details</th>
+                                    <th>Benefits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Online Darshan</strong></td>
+                                    <td>Live streaming</td>
+                                    <td>Free global access</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3D VR Experience</strong></td>
+                                    <td>Virtual reality darshan</td>
+                                    <td>Complete aarti experience</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Queue-less Darshan</strong></td>
+                                    <td>Shastri assistance</td>
+                                    <td>Free locker + prasadam</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Group Bookings</strong></td>
+                                    <td>Event space available</td>
+                                    <td>Conferences, celebrations</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h5>Online Booking</h5>
+                    <p>Book Sugam Darshan, VIP passes, and special aartis online. 24/7 booking available.</p>
+                    <a href="https://www.shrikashivishwanath.org" target="_blank" class="btn btn-outline-primary btn-sm">Book Now</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h5>Accommodation</h5>
+                    <p>Temple trust guest houses and premium rooms near temple. Online booking available.</p>
+                    <a href="https://shrikashivishwanath.org/general" target="_blank" class="btn btn-outline-primary btn-sm">View Options</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h5>Live Darshan</h5>
+                    <p>Watch live streaming of sanctum sanctorum 24/7. Free service for global devotees.</p>
+                    <a href="https://www.shrikashivishwanath.org" target="_blank" class="btn btn-outline-primary btn-sm">Watch Live</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h5>24/7 Support</h5>
+                    <p>Round-the-clock helpline for bookings, information, and assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://cdn.astroved.com/images/astropedia/more-temples/Kashi-Vishwanath-Temple.jpg" alt="Kashi Vishwanath Temple Main" class="gallery-image">
+                    <h6 class="mt-2 text-center">Golden Temple Spire</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://cdn.triptotemples.com/ImageManager/66a093c4e15aead00e2de843-kashi-vishwanath-temple-history-(1).jpg" alt="Temple Complex" class="gallery-image">
+                    <h6 class="mt-2 text-center">Temple Complex</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://staticimg.amarujala.com/assets/images/2021/12/11/kashi-vishwanath-corridor_1639167107.jpeg?w=414&dpr=1.0&q=80" alt="Kashi Corridor" class="gallery-image">
+                    <h6 class="mt-2 text-center">Kashi Vishwanath Corridor</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://i0.wp.com/joshimilestoner.com/wp-content/uploads/2023/10/varanasi-jyotirlinga.webp?resize=640%2C853&ssl=1" alt="Inner Sanctum" class="gallery-image">
+                    <h6 class="mt-2 text-center">Gold-plated linga</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.kailash-yatra.org/images/kashi-ghat.jpg" alt="Ganga Ghat" class="gallery-image">
+                    <h6 class="mt-2 text-center">Sacred Ganga Ghats</h6>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://staybanaras.co.in/images/static/aarti-in-varanasi-2.png" alt="Evening Aarti" class="gallery-image">
+                    <h6 class="mt-2 text-center">Ganga Aarti</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Links & Resources -->
+    <section id="official-links" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Official Links & Resources</h2>
+
+            <div class="official-links">
+                <a href="https://www.shrikashivishwanath.org" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h6>Official Website</h6>
+                    <p>Shri Kashi Vishwanath Temple Trust portal</p>
+                    <small class="text-muted">shrikashivishwanath.org</small>
+                </a>
+
+                <a href="https://shrikashivishwanath.org/frontend/home/poojaList" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h6>Online Pooja Booking</h6>
+                    <p>Book darshan, aartis, and special services</p>
+                    <small class="text-muted">₹250-600 various options</small>
+                </a>
+
+                <a href="https://darshan.kashi.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h6>Sugam Darshan</h6>
+                    <p>Government portal for hassle-free darshan</p>
+                    <small class="text-muted">₹250 queue-less entry</small>
+                </a>
+
+                <a href="https://kashi.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h6>Kashi Official Portal</h6>
+                    <p>Complete Varanasi city information</p>
+                    <small class="text-muted">Government of UP</small>
+                </a>
+
+                <a href="https://shrikashivishwanath.org/general" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h6>Accommodation</h6>
+                    <p>Temple trust and government guest houses</p>
+                    <small class="text-muted">Near temple facilities</small>
+                </a>
+
+                <a href="https://uptourism.gov.in" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h6>UP Tourism</h6>
+                    <p>Official state tourism portal</p>
+                    <small class="text-muted">Varanasi tour packages</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Contact Information</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <strong>Temple Address:</strong><br>
+                            Shri Kashi Vishwanath Temple<br>
+                            CK 37/40, 41, 42 Bansphatak<br>
+                            Vishwanath Gali, Varanasi<br>
+                            Uttar Pradesh - 221 001
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <strong>Contact Numbers:</strong><br>
+                            +91-7080292930 (Main Helpline)<br>
+                            +91-6393131608 (WhatsApp Support)<br>
+                            0542-2392629 (Temple Mandir Phone)<br>
+                            0542-2400049 (24x7 Help Desk)
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <strong>Email Contacts:</strong><br>
+                            shrikashivishwanathtempletrust@gmail.com<br>
+                            support@shrikashivishwanath.org<br>
+                            grievance@skvt.org
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-globe contact-icon"></i>
+                            <strong>Official Website:</strong><br>
+                            <a href="https://www.shrikashivishwanath.org" target="_blank" class="text-warning">shrikashivishwanath.org</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-warning mb-4">Temple Timings</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <strong>Temple Opening:</strong><br>
+                            3:00 AM - 11:00 PM Daily<br>
+                            <small>(24/7/365 Service Available)</small>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-sun contact-icon"></i>
+                            <strong>Darshan Timings:</strong><br>
+                            4:00 AM - 11:00 AM<br>
+                            12:20 PM - 7:00 PM<br>
+                            8:30 PM - 9:00 PM
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-bell contact-icon"></i>
+                            <strong>Aarti Schedule:</strong><br>
+                            Mangla Aarti: 3:00 AM - 4:00 AM<br>
+                            Bhog Aarti: 11:15 AM - 12:20 PM<br>
+                            Sapt-Rishi Aarti: 7:00 PM - 8:15 PM<br>
+                            Shringar Aarti: 9:00 PM - 10:15 PM
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-info-circle contact-icon"></i>
+                            <strong>Booking Support:</strong><br>
+                            Online: 24/7 available<br>
+                            Phone: 6:00 AM - 8:00 PM<br>
+                            WhatsApp: +91-6393131608
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-4 border-top border-secondary">
+                    <p class="mb-2">
+                        <i class="fas fa-quote-left text-warning me-2"></i>
+                        <span class="river-icon">🏛️</span> "ॐ विश्वनाथाय नमः" <span class="river-icon">🏛️</span>
+                    </p>
+                    <small class="text-muted">
+                        <em>Lord of the Universe in the eternal city of Kashi - where death grants liberation</em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6><span class="river-icon">🏛️</span> Kashi Vishwanath Temple</h6>
+                    <p class="small mb-0">Twelfth Jyotirlinga - Golden Temple in spiritual capital Varanasi</p>
+                    <p class="small mt-2">
+                        Official Website: <a href="https://www.shrikashivishwanath.org" target="_blank" class="text-warning">shrikashivishwanath.org</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">&copy; 2025 Kashi Vishwanath Temple Portal. Created with devotion.</p>
+                    <p class="small mt-2">
+                        Helpline: <span class="text-warning">+91-7080292930</span> | 
+                        <span class="text-warning">WhatsApp: +91-6393131608</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 107, 53, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 107, 53, 0.95)';
+            }
+        });
+
+        // Image gallery lightbox effect
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src.replace('w=400&h=300', 'w=800&h=600');
+                modalImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;border-radius:10px;';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-collapse a');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // collapse navbar after clicking any link
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+                });
+                bsCollapse.hide();
+            });
+            });
+        });
+    </script>
+</body>
+</html>
